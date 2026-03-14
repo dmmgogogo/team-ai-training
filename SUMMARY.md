@@ -46,3 +46,9 @@
 * [Prompt 工程入门](05-practical/01-prompt-engineering.md)
 * [AI 辅助开发工作流](05-practical/02-workflow.md)
 * [避坑指南与注意事项](05-practical/03-pitfalls.md)
+
+---
+
+## 📚 参考资源
+
+* [评测榜单 · 官方文档 · 学习资源](references.md)

@@ -103,6 +103,23 @@ AI 编程工具
 
 ---
 
+## 工具官网快速入口
+
+| 工具 | 官网 | 文档 |
+|------|------|------|
+| Cursor | [cursor.com](https://www.cursor.com) | [docs.cursor.com](https://docs.cursor.com) |
+| Windsurf | [codeium.com/windsurf](https://codeium.com/windsurf) | [docs.codeium.com/windsurf](https://docs.codeium.com/windsurf/getting-started) |
+| GitHub Copilot | [github.com/features/copilot](https://github.com/features/copilot) | [docs.github.com/en/copilot](https://docs.github.com/en/copilot) |
+| Claude Code | [anthropic.com/claude-code](https://www.anthropic.com/claude-code) | [docs.anthropic.com](https://docs.anthropic.com/en/docs/claude-code/overview) |
+| Gemini CLI | [github.com/google-gemini/gemini-cli](https://github.com/google-gemini/gemini-cli) | — |
+| Aider | [aider.chat](https://aider.chat) | [aider.chat/docs](https://aider.chat/docs/install.html) |
+| Continue.dev | [continue.dev](https://www.continue.dev) | [docs.continue.dev](https://docs.continue.dev) |
+| v0 | [v0.dev](https://v0.dev) | — |
+
+> 数据来源：[LogRocket AI Dev Tool Power Rankings (March 2026)](https://blog.logrocket.com/ai-dev-tool-power-rankings/) · [SWE-bench Leaderboard](https://www.swebench.com)
+
+---
+
 ## 下一步
 
 - [M3-02 Cursor 使用指南](./02-cursor.md)

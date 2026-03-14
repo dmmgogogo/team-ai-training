@@ -128,6 +128,19 @@
 
 ---
 
+## 📊 权威评测榜单
+
+> 以下为可独立核实的真实评测平台，数据由第三方或社区维护，非模型厂商自评：
+
+| 榜单 | 地址 | 评测内容 |
+|------|------|---------|
+| **LMArena 人类偏好榜** | [lmarena.ai](https://lmarena.ai) | 真实用户盲测投票，600万+次评分，衡量模型综合表现 |
+| **SWE-bench 代码榜** | [swebench.com](https://www.swebench.com) | 解决真实 GitHub Issue，代码能力黄金标准 |
+| **Artificial Analysis** | [artificialanalysis.ai/leaderboards/models](https://artificialanalysis.ai/leaderboards/models) | 质量/速度/价格综合排名，100+ 模型横向对比 |
+| **HuggingFace 开源榜** | [huggingface.co/spaces/open-llm-leaderboard](https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard) | 开源模型专项，含 MMLU-Pro、GPQA、MATH |
+
+---
+
 ## 综合对比速查（2026年3月）
 
 | 维度 | 最强推荐 |
@@ -144,7 +157,20 @@
 
 ---
 
+## 官方文档入口
+
+| 模型 | 使用入口 | 开发者 API |
+|------|---------|-----------|
+| GPT 系列 | [chatgpt.com](https://chatgpt.com) | [platform.openai.com](https://platform.openai.com) |
+| Claude 系列 | [claude.ai](https://claude.ai) | [console.anthropic.com](https://console.anthropic.com) |
+| Gemini 系列 | [gemini.google.com](https://gemini.google.com) | [ai.google.dev](https://ai.google.dev) |
+| Llama 系列 | 本地部署 [ollama.com](https://ollama.com) | [llama.meta.com](https://llama.meta.com) |
+| Grok 系列 | [x.ai](https://x.ai) | [console.x.ai](https://console.x.ai) |
+
+---
+
 ## 下一步
 
 - [M2-02 国内主流模型](./02-domestic-models.md)
 - [M2-03 模型横向对比与选型](./03-comparison.md)
+- [📚 完整参考资源](../references.md)

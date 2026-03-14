@@ -76,11 +76,24 @@
 
 ## 参考资源
 
-- [Learn Claude Agents](https://learn-claude-agents.vercel.app/zh/s01/) — Agent 开发入门
-- [OpenAI 文档](https://platform.openai.com/docs)
-- [Anthropic 文档](https://docs.anthropic.com)
-- [DeepSeek 开放平台](https://platform.deepseek.com)
-- [通义千问](https://tongyi.aliyun.com)
+> 所有链接均经过验证，可直接访问。完整链接库见 [📚 参考资源页](./references.md)。
+
+### 评测榜单（第三方，客观中立）
+- [LMArena](https://lmarena.ai) — 人类偏好排行榜，600万+真实用户投票
+- [SWE-bench](https://www.swebench.com) — AI 代码能力黄金评测
+- [Artificial Analysis](https://artificialanalysis.ai/leaderboards/models) — 速度/质量/价格综合对比
+
+### 官方文档
+- [OpenAI 文档](https://platform.openai.com/docs) — GPT 系列
+- [Anthropic 文档](https://docs.anthropic.com) — Claude 系列
+- [Google AI](https://ai.google.dev) — Gemini 系列
+- [DeepSeek 开放平台](https://platform.deepseek.com) — DeepSeek 系列
+- [阿里云百炼](https://help.aliyun.com/zh/model-studio) — 通义千问 Qwen
+
+### 学习资源
+- [Learn Claude Agents](https://learn-claude-agents.vercel.app/zh/s01/) — Agent 开发入门（本课程参考）
+- [OpenAI Cookbook](https://cookbook.openai.com) — 官方代码示例
+- [Papers with Code](https://paperswithcode.com) — 最新 AI 论文与代码
 
 ---
 

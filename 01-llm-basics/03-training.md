@@ -144,6 +144,16 @@ RLHF 训练复杂、不稳定。近年出现了简化方案：
 
 ---
 
+## 延伸阅读
+
+| 论文/资源 | 链接 | 说明 |
+|-----------|------|------|
+| InstructGPT（RLHF 原文） | [arxiv.org/abs/2203.02155](https://arxiv.org/abs/2203.02155) | OpenAI，SFT + RLHF 的奠基论文 |
+| DeepSeek R1（GRPO） | [arxiv.org/abs/2501.12948](https://arxiv.org/abs/2501.12948) | 低成本训练高性能推理模型 |
+| GPT-3 Scaling Laws | [arxiv.org/abs/2005.14165](https://arxiv.org/abs/2005.14165) | 证明"更大就是更好"的关键论文 |
+
+---
+
 ## 下一步
 
 - [M1-04 核心概念速查](./04-key-concepts.md) — 快速掌握行话

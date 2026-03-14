@@ -196,6 +196,21 @@
 
 ---
 
+## 官方文档入口
+
+| 模型 | 使用入口 | 开发者 API |
+|------|---------|-----------|
+| DeepSeek | [deepseek.com](https://www.deepseek.com) | [platform.deepseek.com](https://platform.deepseek.com) |
+| 通义千问 | [tongyi.aliyun.com](https://tongyi.aliyun.com) | [dashscope.aliyuncs.com](https://dashscope.aliyuncs.com) |
+| MiniMax | [minimaxi.com](https://www.minimaxi.com) | [platform.minimaxi.com](https://platform.minimaxi.com) |
+| Kimi | [kimi.ai](https://kimi.ai) | [platform.moonshot.cn](https://platform.moonshot.cn) |
+| 文心一言 | [yiyan.baidu.com](https://yiyan.baidu.com) | [cloud.baidu.com](https://cloud.baidu.com/product/wenxinworkshop) |
+| 豆包 | [doubao.com](https://www.doubao.com) | [console.volcengine.com](https://console.volcengine.com/ark) |
+| ChatGLM | [chatglm.cn](https://chatglm.cn) | [open.bigmodel.cn](https://open.bigmodel.cn) |
+
+---
+
 ## 下一步
 
 - [M2-03 模型横向对比与选型](./03-comparison.md)
+- [📚 完整参考资源](../references.md)

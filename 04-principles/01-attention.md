@@ -145,10 +145,13 @@ RoPE 是目前最主流的方案，让模型能处理比训练时更长的序列
 
 ---
 
-## 延伸阅读
+## 延伸阅读（真实论文链接）
 
-- 论文：[Attention Is All You Need](https://arxiv.org/abs/1706.03762)（2017，Transformer 原文）
-- 论文：[FlashAttention-2](https://arxiv.org/abs/2307.08691)
+| 论文 | 链接 | 发表年份 |
+|------|------|---------|
+| Attention Is All You Need（Transformer 原文） | [arxiv.org/abs/1706.03762](https://arxiv.org/abs/1706.03762) | 2017，Google Brain |
+| FlashAttention-2 | [arxiv.org/abs/2307.08691](https://arxiv.org/abs/2307.08691) | 2023，Stanford |
+| RoPE 位置编码 | [arxiv.org/abs/2104.09864](https://arxiv.org/abs/2104.09864) | 2021 |
 
 ---
 
