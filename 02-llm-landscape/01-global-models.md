@@ -20,61 +20,117 @@
 
 ## OpenAI · GPT 系列
 
+### GPT-4 系列（仍广泛使用）
+
 | 模型 | 发布 | 特点 | 适合 |
 |------|------|------|------|
 | **GPT-4o** | 2024.5 | 多模态（文本/图像/音频），速度快，性价比高 | 日常任务、开发 API |
-| **GPT-4.1** | 2025 | 超长上下文（1M token），强代码能力 | 大文件分析、代码任务 |
-| **o3** | 2025.4 | 推理增强，慢思考，复杂问题首选 | 数学、代码、逻辑题 |
-| **o4-mini** | 2025.4 | o3 的轻量版，速度快成本低，支持图像 | 日常推理、性价比 |
-| **GPT-5** | 2026 | 新旗舰，综合能力全面升级 | 顶级复杂任务 |
+| **GPT-4o mini** | 2024.7 | 超低成本，替代 GPT-3.5 | 高频简单任务 |
+| **GPT-4.1** | 2025.4 | 超长上下文（1M token），代码能力强 | 大文件分析、代码任务 |
 
-**特点：**
-- 生态最完善，插件/工具最多
-- API 最成熟，文档最好
-- o3 / o4-mini 推理能力行业领先
-- GPT Image 1（2025.3）替代 DALL-E 3，图像生成大幅提升
-- 多模态能力强（图像、语音、视频）
+### o 系列推理模型
 
-**入口：** chatgpt.com / platform.openai.com
+| 模型 | 发布 | 特点 | 适合 |
+|------|------|------|------|
+| **o3** | 2025.4.16 | 慢思考推理模型，复杂任务首选 | 数学、算法、深度逻辑 |
+| **o4-mini** | 2025.4.16 | o3 轻量版，速度快成本低，支持图像输入 | 日常推理、性价比 |
+
+### GPT-5 系列（2025.8 起持续迭代）
+
+| 模型 | 发布 | 特点 | 适合 |
+|------|------|------|------|
+| **GPT-5.0** | 2025.8.7 | GPT-5 首发版，综合能力全面升级 | 复杂任务基础版 |
+| **GPT-5.1** | 2025.11 | 能力增强，更稳定 | 日常高质量任务 |
+| **GPT-5.2** | 2025.12.11 | 新增 Thinking 模式（推理增强版） | 需要推理的复杂任务 |
+| **GPT-5.3-Codex** | 2026.2 | 代码专项优化版，面向开发者 | 编程、代码生成 |
+| **GPT-5.4** | 2026.3.5 🔥 | 最新旗舰，含 Thinking 版；"专业工作最强最高效模型" | 顶级复杂任务 |
+
+> 📌 **来源：** [Wikipedia - ChatGPT](https://en.wikipedia.org/wiki/ChatGPT) · [TechCrunch - GPT-5.4 发布](https://techcrunch.com/2026/03/05/openai-launches-gpt-5-4-with-pro-and-thinking-versions/)
+
+**GPT-5 系列特点：**
+- 迭代节奏极快，平均每 1-2 个月发布新版本
+- 每代都有标准版和 **Thinking（推理）版** 两种模式
+- GPT-5.3-Codex 是编程专项，开发者重点关注
+- GPT-5.4 是当前（2026.3）最新旗舰
+
+**其他产品：**
+- GPT Image 1（2025.3）：替代 DALL-E 3，图像生成大幅提升
+- Sora 2：视频生成模型
+
+**入口：** [chatgpt.com](https://chatgpt.com) / [platform.openai.com](https://platform.openai.com)
 
 ---
 
 ## Anthropic · Claude 系列
 
+### Claude 3 系列（2024，仍在使用）
+
+| 模型 | 发布 | 特点 |
+|------|------|------|
+| **Claude 3.5 Sonnet** | 2024.6 | 代码能力突破，开发者广泛使用 |
+| **Claude 3.7 Sonnet** | 2025.2 | 首次引入 Extended Thinking（慢思考）|
+
+### Claude 4 系列（2025-2026，当前主力）
+
 | 模型 | 发布 | 特点 | 适合 |
 |------|------|------|------|
-| **Claude Sonnet 4.6** | 2026.2 | 最新 Sonnet，代码极强，默认免费可用 | 编程助手、日常任务 |
-| **Claude Opus 4.6** | 2026.2 | 旗舰级，1M 上下文，支持 Agent Teams | 复杂分析、长文写作、多 Agent |
-| **Claude Opus 4.5** | 2025.11 | 价格下降 67%，输出 token 减少 76% | 高性价比复杂任务 |
-| **Claude 3.7 Sonnet** | 2025 | Extended Thinking（慢思考） | 深度推理、代码审查 |
+| **Claude Sonnet 4.0** | 2025 | Claude 4 代首发 Sonnet | 日常编程、文档 |
+| **Claude Opus 4.1** | 2025 | Claude 4 代首发 Opus，旗舰 | 复杂分析 |
+| **Claude Opus 4.5** | 2025.11.24 | 价格降 67%，输出 token 减 76% | 高性价比旗舰任务 |
+| **Claude Sonnet 4.5** | 2025 | 性能提升，SWE-bench 进步显著 | 编程助手 |
+| **Claude Opus 4.6** | 2026.2.5 | 1M 上下文，Agent Teams，Infinite Chats | 大型任务、多 Agent |
+| **Claude Sonnet 4.6** | 2026.2.17 🔥 | 最新，SWE-bench **79.6%**，接近 Opus 4.6 水平 | 日常编程首选 |
 | **Claude Haiku** | - | 极快极便宜 | 高频简单任务 |
 
-**特点：**
-- **代码能力极强**，开发者最爱（Cursor 底层默认使用 Claude）
-- Opus 4.6 支持 **Infinite Chats**（无上下文限制错误）和 **Agent Teams**（多 Agent 协作）
-- 安全和对齐做得好，输出可靠性高
-- 擅长长文本写作和结构化输出
+> 📌 **来源：** [Anthropic Claude 版本时间线](https://www.scriptbyai.com/anthropic-claude-timeline/) · [Claude Sonnet 4.6 评测](https://www.digitalapplied.com/blog/claude-sonnet-4-6-benchmarks-pricing-guide)
 
-**入口：** claude.ai / console.anthropic.com
+**Anthropic 特点：**
+- **代码能力行业顶尖**，Sonnet 4.6 SWE-bench 79.6%（编码评测第二）
+- Cursor 底层默认使用 Claude
+- Opus 4.6 新增 **Infinite Chats**（无上下文限制错误）和 **Agent Teams**
+- 安全和对齐做得最好，输出可靠性高
+
+**入口：** [claude.ai](https://claude.ai) / [console.anthropic.com](https://console.anthropic.com)
 
 ---
 
 ## Google DeepMind · Gemini 系列
 
+### Gemini 2.0 系列（2025 上半年主力）
+
+| 模型 | 发布 | 特点 |
+|------|------|------|
+| **Gemini 2.0 Flash** | 2025.2 | 速度极快，多模态，低成本 |
+| **Gemini 2.0 Flash-Lite** | 2025 | 超轻量，最低延迟 |
+| **Gemini 2.0 Ultra** | 2025 | 顶级旗舰 |
+
+### Gemini 2.5 系列（2025 下半年，当前主力）
+
 | 模型 | 发布 | 特点 | 适合 |
 |------|------|------|------|
-| **Gemini 2.0 Flash** | 2025 | 速度快、成本低、多模态 | 日常任务、图像理解 |
-| **Gemini 2.5 Pro** | 2025.3 | 首个明确的"思维模型"，登顶 LMArena | 复杂推理、大文件分析 |
-| **Gemini 2.0 Ultra** | 2025 | 顶级能力 | 企业高端需求 |
+| **Gemini 2.5 Pro** | 2025.3.25 | Google 首个"思维模型"，发布即登顶 LMArena | 复杂推理、大文件分析 |
+| **Gemini 2.5 Flash** | 2025 | 2.5 代轻量版，速度/质量均衡 | 日常任务、API 调用 |
+| **Gemini 2.5 Flash Image** | 2025.8（GA 2025.10）| 专项图像生成/编辑 | 图像处理工作流 |
+| **Gemini 2.5 Flash-Lite** | 2025.9 | 超轻量，⚠️ 2026.3.31 停止服务 | — |
 
-**特点：**
-- **Gemini 2.5 Pro 是 Google 迄今最强推理模型**，发布即登顶人类偏好榜
-- 上下文窗口超大（Gemini 1.5 Pro 可达 200 万 Token）
-- 与 Google 生态深度集成（Workspace、搜索、Android）
-- 多模态能力强：文本、图像、视频、音频
+### Gemini 3 系列（2026，最新一代）
+
+| 模型 | 发布 | 特点 |
+|------|------|------|
+| **Gemini 3 Flash** | 2026.1 🔥 | 最新一代轻量模型 |
+
+> 📌 注意：Gemini 2.5 Pro 和 2.5 Flash 计划于 **2026.6.17 停用**，届时将由新版本替代。
+>
+> 📌 **来源：** [Wikipedia - Gemini](https://en.wikipedia.org/wiki/Gemini_(language_model)) · [Google AI Developers Forum](https://discuss.ai.google.dev/t/clarification-on-stable-replacement-models-for-gemini-2-5-flash-and-gemini-2-5-pro-before-june-2026-deprecation/130009)
+
+**Google 特点：**
+- **上下文窗口最大**（Gemini 1.5 Pro 可达 200 万 Token）
+- Gemini 2.5 Pro 是首个明确的"思维模型"，复杂推理行业领先
+- 与 Google Workspace、搜索、Android 深度整合
+- 多模态能力最强：文本、图像、视频、音频全覆盖
 - 有免费额度，适合个人试用
 
-**入口：** gemini.google.com / ai.google.dev
+**入口：** [gemini.google.com](https://gemini.google.com) / [ai.google.dev](https://ai.google.dev)
 
 ---
 

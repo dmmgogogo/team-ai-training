@@ -27,11 +27,14 @@
 
 | 模型 | 发布时间 | 特点 |
 |------|---------|------|
-| **DeepSeek V3** | 2025.1 | 综合能力极强，代码/数学顶尖 |
-| **DeepSeek R1** | 2025.1 | 推理模型，对标 o1，完全开源 |
-| **DeepSeek V3.1-Terminus** | 2025.9 | V3 升级版，SWE-bench 超 V3 40%+ |
-| **DeepSeek V3.2-Exp** | 2025.9 | 实验版，使用 Sparse Attention 新架构 |
-| **DeepSeek V4** | 即将发布 | 社区消息，预计 2026 年 |
+| **DeepSeek V3** | 2025.1 | 首发版，综合能力极强，代码/数学顶尖，训练成本仅 $557 万 |
+| **DeepSeek R1** | 2025.1 | 推理模型，对标 o1，**完全开源** |
+| **DeepSeek V3.1** | 2025.8.30 | V3 升级版，SWE-bench 超 V3 **40%+** |
+| **DeepSeek V3.1-Terminus** | 2025.9.22 | V3.1 完整版，使用 DeepSeek Sparse Attention 新架构 |
+| **DeepSeek V3.2-Exp** | 2025.9.29 | 实验版，新架构持续探索 |
+| **DeepSeek V4** | 即将发布 | 社区消息，预计 2026 年内发布 |
+
+> 📌 **来源：** [Wikipedia - DeepSeek](https://en.wikipedia.org/wiki/DeepSeek)
 
 **为什么 DeepSeek 引爆全球？**
 - DeepSeek V3 训练成本仅 **557 万美元**，而 GPT-4 约 1 亿美元
