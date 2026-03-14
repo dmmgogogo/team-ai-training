@@ -1,6 +1,6 @@
 # M3-02 · Cursor 使用指南
 
-> 当前最流行的 AI IDE，把 VS Code 的熟悉感和 AI 的强大结合在一起。
+> 最后更新：2026年3月。当前市场领导者（$500M+ ARR，360K付费用户），最流行的 AI IDE。
 
 ---
 
@@ -137,13 +137,21 @@ You are an expert in Python FastAPI.
 
 ---
 
+## 2026年新进展
+
+- **支持 JetBrains IDE**（2026年3月）：Cursor 加入 JetBrains ACP Registry，IntelliJ IDEA、PyCharm 等可直接使用 Cursor Agent 能力（需 JetBrains 2025.3.2+ + AI Assistant 插件）
+- **Composer 功能**：专有超快编码模型，agent-centric 界面设计
+- **当前版本**：2.6.x（2026年3月）
+
+---
+
 ## 定价
 
 | 计划 | 价格 | 内容 |
 |------|------|------|
 | Free | 免费 | 有限 Claude 使用次数 |
 | Pro | $20/月 | 无限制，含 GPT-4o + Claude Sonnet |
-| Business | $40/月/人 | 团队管理，数据隐私 |
+| Business | $40/月/人 | 团队管理，数据隐私，可关闭数据收集 |
 
 > 💡 团队购买 Business 计划可以关闭"改善产品"数据收集。
 
