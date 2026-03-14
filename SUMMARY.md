@@ -1,0 +1,48 @@
+# 目录
+
+## 📖 课程导航
+
+* [课程总览](README.md)
+
+---
+
+## M1 · AI 大模型基础
+
+* [什么是大语言模型（LLM）](01-llm-basics/01-what-is-llm.md)
+* [Transformer 架构](01-llm-basics/02-transformer.md)
+* [训练过程：预训练、微调与 RLHF](01-llm-basics/03-training.md)
+* [核心概念速查](01-llm-basics/04-key-concepts.md)
+
+---
+
+## M2 · 国内外主流大模型
+
+* [国际主流大模型](02-llm-landscape/01-global-models.md)
+* [国内主流大模型](02-llm-landscape/02-domestic-models.md)
+* [模型横向对比与选型指南](02-llm-landscape/03-comparison.md)
+
+---
+
+## M3 · AI 编程工具全景
+
+* [AI 编程工具概览](03-ai-coding-tools/01-overview.md)
+* [Cursor 使用指南](03-ai-coding-tools/02-cursor.md)
+* [其他主流工具](03-ai-coding-tools/03-other-tools.md)
+* [AI 编程工具底层原理](03-ai-coding-tools/04-how-it-works.md)
+
+---
+
+## M4 · 底层原理深入
+
+* [Attention 机制详解](04-principles/01-attention.md)
+* [RAG：检索增强生成](04-principles/02-rag.md)
+* [AI Agent 智能体原理](04-principles/03-agent.md)
+* [MCP：模型上下文协议](04-principles/04-mcp.md)
+
+---
+
+## M5 · 实战与最佳实践
+
+* [Prompt 工程入门](05-practical/01-prompt-engineering.md)
+* [AI 辅助开发工作流](05-practical/02-workflow.md)
+* [避坑指南与注意事项](05-practical/03-pitfalls.md)
