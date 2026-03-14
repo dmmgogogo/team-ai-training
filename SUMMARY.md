@@ -46,6 +46,11 @@
 * [Prompt 工程入门](05-practical/01-prompt-engineering.md)
 * [AI 辅助开发工作流](05-practical/02-workflow.md)
 * [避坑指南与注意事项](05-practical/03-pitfalls.md)
+* [Tools & Skills：工具调用与技能扩展](05-practical/04-tools-and-skills.md)
+* [Multi-Agent 多智能体实战](05-practical/05-multi-agent.md)
+* [Cursor 正确配置与高效使用](05-practical/06-cursor-setup.md)
+* [ChatGPT 正确配置与高效使用](05-practical/07-chatgpt-setup.md)
+* [Claude 正确配置与高效使用](05-practical/08-claude-setup.md)
 
 ---
 
