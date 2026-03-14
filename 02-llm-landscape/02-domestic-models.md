@@ -10,6 +10,7 @@
 国内主流大模型
 ├── DeepSeek（深度求索）→ V3.1 / R1  ⭐ 性价比之王
 ├── 阿里云             → Qwen3（2025.4 开源，8种尺寸）
+├── MiniMax            → M1 / M2.5  ⭐ Agent + 编程新星（2026.3）
 ├── 月之暗面           → Kimi k1.5（长文本+推理）
 ├── 百度               → 文心一言 ERNIE 4.5
 ├── 智谱 AI            → GLM-4 系列
@@ -69,6 +70,38 @@
 - API 平台：阿里云百炼（DashScope）
 
 **入口：** tongyi.aliyun.com / dashscope.aliyuncs.com
+
+---
+
+## MiniMax ⭐ 新星崛起
+
+> 2026年3月密集发布，编程和 Agent 能力冲击行业 SOTA
+
+| 模型 | 发布 | 特点 |
+|------|------|------|
+| **MiniMax M1** | 2026.3 | 开源！全球首个大规模混合架构推理模型，最长 **100万 Token** 上下文 |
+| **MiniMax M2** | 2026.3 | Agent 产品，含 Deep Research、代码执行、浏览器控制 |
+| **MiniMax M2.5** | 2026.3 🔥 | 编程+Agent SOTA，SWE-bench **80.2%**，成本极低 |
+
+**M2.5 核心亮点：**
+- **SWE-bench Verified 80.2%**，Multi-SWE-bench 51.3%，BrowseComp 76.3%，多项刷新行业 SOTA
+- 比上一版本 M2.1 完成任务速度快 **37%**
+- 成本极低：100 tok/s 连续工作 **1小时仅需 1 美元**；50 tok/s 仅需 0.3 美元
+- 定位：**"第一个不需要考虑使用成本可以无限使用的前沿模型"**
+
+**M1 核心亮点：**
+- 全球首个开源的大规模混合架构推理模型
+- 支持最长 **100 万 Token** 上下文
+- 价格比 DeepSeek-R1 更低（32k 以内输入 ¥0.8/百万Token）
+- APP 和 Web **不限量免费**使用
+
+**特点：**
+- 短时间内密集发布，迭代速度极快
+- Agent 能力突出（Deep Research、浏览器控制、代码执行）
+- 定价激进，主打极致性价比
+- 国内 APP 免费使用门槛极低
+
+**入口：** minimaxi.com / hailuo.ai（视频生成）
 
 ---
 
@@ -140,14 +173,15 @@
 
 | 维度 | 推荐 |
 |------|------|
-| 代码开发 | DeepSeek V3.1、Qwen2.5-Coder、Kimi Code |
-| 推理/数学 | DeepSeek R1、Kimi k1.5、QwQ-32B |
-| 长文档处理 | Kimi（200万Token） |
-| 性价比 | DeepSeek V3（国内最高性价比）|
-| 开源部署 | DeepSeek R1、Qwen3、Kimi Code |
+| 代码开发 | MiniMax M2.5（SWE-bench 80.2%）、DeepSeek V3.1、Kimi Code |
+| 推理/数学 | DeepSeek R1、MiniMax M1、Kimi k1.5、QwQ-32B |
+| Agent 任务 | MiniMax M2/M2.5、Kimi k1.5 |
+| 长文档处理 | Kimi（200万Token）、MiniMax M1（100万Token）|
+| 极致性价比 | MiniMax M2.5（$1/小时）、DeepSeek V3 |
+| 开源部署 | DeepSeek R1、Qwen3、MiniMax M1、Kimi Code |
 | 企业集成 | 千问（阿里云）、文心（百度云）、混元（腾讯云）|
 | 中文对话 | Kimi、文心 4.5、豆包 |
-| 多模态 | Qwen3-VL、文心 |
+| 多模态 | Qwen3-VL、文心、Hailuo（MiniMax 视频）|
 
 ---
 
