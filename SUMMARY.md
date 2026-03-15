@@ -92,6 +92,15 @@
 
 ---
 
+## M10 · AI Cloud Agent
+
+* [⭐️ 什么是 AI Cloud Agent](10-cloud-agent/01-what-is-cloud-agent.md)
+* [⭐️ Cloud Agent 工作原理](10-cloud-agent/02-how-it-works.md)
+* [⭐️ 如何使用 Cloud Agent（实战）](10-cloud-agent/03-using-cloud-agent.md)
+* [自建 Cloud Agent 工作流](10-cloud-agent/04-build-your-own.md)
+
+---
+
 ## 📚 参考资源
 
 * [评测榜单 · 官方文档 · 学习资源](references.md)

@@ -108,6 +108,13 @@
 - [M9-02 ⭐️ 安装与配置](./09-openclaw/02-setup.md)
 - [M9-03 ⭐️ Skills 与 MCP 接入](./09-openclaw/03-skills-mcp.md)
 
+### M10 · AI Cloud Agent
+
+- [M10-01 ⭐️ 什么是 AI Cloud Agent](./10-cloud-agent/01-what-is-cloud-agent.md)
+- [M10-02 ⭐️ Cloud Agent 工作原理](./10-cloud-agent/02-how-it-works.md)
+- [M10-03 ⭐️ 如何使用 Cloud Agent（实战）](./10-cloud-agent/03-using-cloud-agent.md)
+- [M10-04 自建 Cloud Agent 工作流](./10-cloud-agent/04-build-your-own.md)
+
 ---
 
 ## 参考资源
