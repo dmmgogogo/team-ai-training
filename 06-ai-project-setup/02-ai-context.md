@@ -101,6 +101,27 @@ AI：[基于完整上下文，直接给出符合项目规范的代码]
 - 图片上传：utils/upload.js
 ```
 
+### Golang 后端额外要写的
+
+```markdown
+## Golang 项目特别说明
+- API 文档：docs/api.md（或 Swagger 地址）
+- 数据库表结构：docs/schema.sql
+- 错误码定义：internal/pkg/errcode/errcode.go
+- 中间件列表：JWT鉴权、限流、日志、跨域，见 internal/middleware/
+
+## 常用操作位置
+- 新增路由：internal/router/router.go
+- 全局配置：config/config.yaml
+- 数据库连接：internal/pkg/db/db.go
+
+## 接口规范
+- 统一前缀：/api/v1/
+- 鉴权：Bearer Token，放在 Authorization Header
+- 分页参数：page + page_size，默认 page_size=20
+```
+```
+
 ---
 
 ## README.md 要让 AI 能看懂
