@@ -23,7 +23,7 @@
 | [M2](./02-llm-landscape/) | **国内外主流大模型** | GPT/Claude/Gemini/DeepSeek 等横向对比 | 所有人 |
 | [M3](./03-ai-coding-tools/) | **AI 编程工具全景** | Cursor、Copilot、Claude Code 等工具使用 | 开发同学 |
 | [M4](./04-principles/) | **底层原理深入** | Attention 机制、RAG、Agent、MCP | 有兴趣深入的同学 |
-| [M5](./05-practical/) | **实战与最佳实践** | Prompt 工程、工作流设计、避坑指南 | 所有人 |
+| [M5](./05-practical/) | **实战与最佳实践** | Prompt 工程、工具调用、Skills、Multi-Agent、安全隐私、成本管理 | 所有人 |
 
 ---
 
@@ -68,9 +68,18 @@
 - [M4-04 MCP 模型上下文协议](./04-principles/04-mcp.md)
 
 ### M5 · 实战与最佳实践
-- [M5-01 Prompt 工程入门](./05-practical/01-prompt-engineering.md)
+- [M5-01 ⭐️ Prompt 工程入门](./05-practical/01-prompt-engineering.md)
 - [M5-02 AI 辅助开发工作流](./05-practical/02-workflow.md)
 - [M5-03 避坑指南与注意事项](./05-practical/03-pitfalls.md)
+- [M5-04 Tools：工具调用](./05-practical/04-tools.md)
+- [M5-04b ⭐️ Skills：技能扩展（重要）](./05-practical/04-skills.md)
+- [M5-05 ⭐️ Multi-Agent 多智能体实战](./05-practical/05-multi-agent.md)
+- [M5-06 ⭐️ Cursor 正确配置与高效使用](./05-practical/06-cursor-setup.md)
+- [M5-07 ChatGPT 正确配置与高效使用](./05-practical/07-chatgpt-setup.md)
+- [M5-08 Claude 正确配置与高效使用](./05-practical/08-claude-setup.md)
+- [M5-09 ⭐️ AI 安全与数据隐私](./05-practical/09-security-privacy.md)
+- [M5-10 ⭐️ 代码审查与质量控制](./05-practical/10-code-review.md)
+- [M5-11 ⭐️ 成本管理与模型选型](./05-practical/11-cost-management.md)
 
 ---
 
