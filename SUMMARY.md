@@ -63,6 +63,7 @@
 * [⭐️ .cursorrules 配置指南](06-ai-project-setup/01-cursorrules.md)
 * [⭐️ 给 AI 喂上下文：项目文档规范](06-ai-project-setup/02-ai-context.md)
 * [MCP 项目集成](06-ai-project-setup/03-mcp-integration.md)
+* [⭐️ 真实案例：全栈项目 AI 配置实战](06-ai-project-setup/04-real-world-template.md)
 
 ---
 
