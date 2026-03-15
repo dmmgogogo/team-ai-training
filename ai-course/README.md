@@ -22,6 +22,7 @@
 | [M3](./03-ai-coding-tools/) | **AI 编程工具全景** | Cursor、Copilot、Claude Code 等工具使用 | 开发同学 |
 | [M4](./04-principles/) | **底层原理深入** | Attention 机制、RAG、Agent、MCP | 有兴趣深入的同学 |
 | [M5](./05-practical/) | **实战与最佳实践** | Prompt 工程、工作流设计、避坑指南 | 所有人 |
+| [M10](./10-cloud-agent/) | **AI Cloud Agent** | Cloud Agent 原理、Cursor Background Agent、自建工作流 | 开发同学 |
 
 ---
 
@@ -69,6 +70,12 @@
 - [M5-01 Prompt 工程入门](./05-practical/01-prompt-engineering.md)
 - [M5-02 AI 辅助开发工作流](./05-practical/02-workflow.md)
 - [M5-03 避坑指南与注意事项](./05-practical/03-pitfalls.md)
+
+### M10 · AI Cloud Agent
+- [M10-01 什么是 AI Cloud Agent](./10-cloud-agent/01-what-is-cloud-agent.md)
+- [M10-02 Cloud Agent 工作原理](./10-cloud-agent/02-how-it-works.md)
+- [M10-03 如何使用 Cloud Agent（实战）](./10-cloud-agent/03-using-cloud-agent.md)
+- [M10-04 自建 Cloud Agent 工作流](./10-cloud-agent/04-build-your-own.md)
 
 ---
 
