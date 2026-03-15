@@ -25,6 +25,7 @@
 | [M3](./03-ai-coding-tools/) | **AI 编程工具全景** | Cursor、Copilot、Claude Code 等工具使用 | 开发同学 |
 | [M4](./04-principles/) | **底层原理深入** | Attention 机制、RAG、Agent、MCP | 有兴趣深入的同学 |
 | [M5](./05-practical/) | **实战与最佳实践** | Prompt 工程、工具调用、Skills、Multi-Agent、安全隐私、成本管理 | 所有人 |
+| [M6](./06-ai-project-setup/) | **AI 项目配置规范** | .cursorrules、项目上下文文档、MCP 集成 | 开发同学 |
 
 ---
 
@@ -104,6 +105,13 @@
 - [Learn Claude Agents](https://learn-claude-agents.vercel.app/zh/s01/) — Agent 开发入门（本课程参考）
 - [OpenAI Cookbook](https://cookbook.openai.com) — 官方代码示例
 - [Papers with Code](https://paperswithcode.com) — 最新 AI 论文与代码
+
+---
+
+### M6 · AI 项目配置规范
+- [M6-01 ⭐️ .cursorrules 配置指南](./06-ai-project-setup/01-cursorrules.md)
+- [M6-02 ⭐️ 给 AI 喂上下文：项目文档规范](./06-ai-project-setup/02-ai-context.md)
+- [M6-03 MCP 项目集成](./06-ai-project-setup/03-mcp-integration.md)
 
 ---
 

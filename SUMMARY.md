@@ -58,6 +58,14 @@
 
 ---
 
+## M6 · AI 项目配置规范
+
+* [⭐️ .cursorrules 配置指南](06-ai-project-setup/01-cursorrules.md)
+* [⭐️ 给 AI 喂上下文：项目文档规范](06-ai-project-setup/02-ai-context.md)
+* [MCP 项目集成](06-ai-project-setup/03-mcp-integration.md)
+
+---
+
 ## 📚 参考资源
 
 * [评测榜单 · 官方文档 · 学习资源](references.md)
