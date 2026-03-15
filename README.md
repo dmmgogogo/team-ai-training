@@ -1,55 +1,44 @@
-# 🤖 AI 技术培训课程 · AI Technical Training
+# 🤖 AI 技术培训课程
 
-> **中文** · 面向技术团队，帮助大家了解 AI 大模型原理、主流工具及实战应用。
->
-> **English** · A practical AI training course for engineering teams — covering LLM fundamentals, model landscape, coding tools, core principles, and real-world best practices.
+> 面向技术团队，帮助大家了解 AI 大模型原理、主流工具及实战应用。
 >
 > 📌 本课程持续更新，建议收藏。欢迎提 Issue 反馈或补充内容。
-> 📌 This course is continuously updated. Feel free to open an Issue for feedback or suggestions.
 
 ---
 
-## 课程目标 · Course Goals
+## 课程目标
 
-**中文**
 - 理解 AI 大模型的工作原理，不再"黑盒"
 - 掌握国内外主流模型的特点和选型方法
 - 上手主流 AI 编程工具，提升开发效率
 - 具备基本的 Prompt 工程能力
 - 了解 AI 使用中的安全、成本与质量控制
 
-**English**
-- Understand how LLMs work — no more black-box confusion
-- Know the key differences between major models and how to choose the right one
-- Use AI coding tools effectively to boost development productivity
-- Build foundational Prompt Engineering skills
-- Apply best practices for AI security, cost control, and code quality
-
 ---
 
-## 课程模块 · Modules
+## 课程模块
 
-| 编号 | 模块 / Module | 内容概述 / Overview | 适合人群 / Audience |
+| 编号 | 模块 | 内容概述 | 适合人群 |
 |------|------|----------|----------|
-| [M1](./01-llm-basics/) | **AI 大模型基础** · LLM Fundamentals | 什么是 LLM、Transformer、训练过程、核心概念 | 所有人 · Everyone |
-| [M2](./02-llm-landscape/) | **国内外主流大模型** · Model Landscape | GPT/Claude/Gemini/DeepSeek 等横向对比 | 所有人 · Everyone |
-| [M3](./03-ai-coding-tools/) | **AI 编程工具全景** · AI Coding Tools | Cursor、Copilot、Claude Code 等工具使用 | 开发同学 · Developers |
-| [M4](./04-principles/) | **底层原理深入** · Deep Dive | Attention 机制、RAG、Agent、MCP | 进阶学员 · Advanced |
-| [M5](./05-practical/) | **实战与最佳实践** · Best Practices | Prompt 工程、工具调用、Skills、Multi-Agent、安全隐私、成本管理 | 所有人 · Everyone |
+| [M1](./01-llm-basics/) | **AI 大模型基础** | 什么是 LLM、Transformer、训练过程、核心概念 | 所有人 |
+| [M2](./02-llm-landscape/) | **国内外主流大模型** | GPT/Claude/Gemini/DeepSeek 等横向对比 | 所有人 |
+| [M3](./03-ai-coding-tools/) | **AI 编程工具全景** | Cursor、Copilot、Claude Code 等工具使用 | 开发同学 |
+| [M4](./04-principles/) | **底层原理深入** | Attention 机制、RAG、Agent、MCP | 有兴趣深入的同学 |
+| [M5](./05-practical/) | **实战与最佳实践** | Prompt 工程、工具调用、Skills、Multi-Agent、安全隐私、成本管理 | 所有人 |
 
 ---
 
-## 学习路径推荐 · Learning Paths
+## 学习路径推荐
 
 ```
-入门路线 · Beginner（非技术 / 管理 · Non-technical / Management）:
+入门路线（非技术 / 管理）:
   M1-01 → M1-04 → M2-01 → M2-02 → M5-01
 
-开发路线 · Developer（技术同学 · Engineers）:
+开发路线（技术同学）:
   M1（全） → M2（全） → M3（全） → M4 → M5
 
-深度路线 · Advanced（想深入研究 · In-depth study）:
-  全部模块顺序学习 · All modules in order
+深度路线（想深入研究）:
+  全部模块顺序学习
 ```
 
 ---
@@ -119,4 +108,3 @@
 ---
 
 *课程持续更新中。AI 领域发展迅速，建议每季度复习一次。*
-*This course is actively maintained. The AI landscape evolves fast — a quarterly review is recommended.*
