@@ -36,7 +36,7 @@
   M1-01 → M1-04 → M2-01 → M2-02 → M5-01
 
 开发路线（技术同学）:
-  M1（全） → M2（全） → M3（全） → M4 → M5
+  M1（全） → M2（全） → M3（全） → M4 → M5 → M6
 
 深度路线（想深入研究）:
   全部模块顺序学习
@@ -83,6 +83,11 @@
 - [M5-10 ⭐️ 代码审查与质量控制](./05-practical/10-code-review.md)
 - [M5-11 ⭐️ 成本管理与模型选型](./05-practical/11-cost-management.md)
 
+### M6 · AI 项目配置规范
+- [M6-01 ⭐️ .cursorrules 配置指南](./06-ai-project-setup/01-cursorrules.md)
+- [M6-02 ⭐️ 给 AI 喂上下文：项目文档规范](./06-ai-project-setup/02-ai-context.md)
+- [M6-03 MCP 项目集成](./06-ai-project-setup/03-mcp-integration.md)
+
 ---
 
 ## 参考资源
@@ -105,13 +110,6 @@
 - [Learn Claude Agents](https://learn-claude-agents.vercel.app/zh/s01/) — Agent 开发入门（本课程参考）
 - [OpenAI Cookbook](https://cookbook.openai.com) — 官方代码示例
 - [Papers with Code](https://paperswithcode.com) — 最新 AI 论文与代码
-
----
-
-### M6 · AI 项目配置规范
-- [M6-01 ⭐️ .cursorrules 配置指南](./06-ai-project-setup/01-cursorrules.md)
-- [M6-02 ⭐️ 给 AI 喂上下文：项目文档规范](./06-ai-project-setup/02-ai-context.md)
-- [M6-03 MCP 项目集成](./06-ai-project-setup/03-mcp-integration.md)
 
 ---
 
