@@ -26,6 +26,8 @@
 | [M4](./04-principles/) | **底层原理深入** | Attention 机制、RAG、Agent、MCP | 有兴趣深入的同学 |
 | [M5](./05-practical/) | **实战与最佳实践** | Prompt 工程、工具调用、Skills、Multi-Agent、安全隐私、成本管理 | 所有人 |
 | [M6](./06-ai-project-setup/) | **AI 项目配置规范** | .cursorrules、项目上下文文档、MCP 集成 | 开发同学 |
+| [M7](./07-skills/) | **Skills 精选** | GPT Store、Claude Projects、Cursor Rules 社区精选 | 所有人 |
+| [M8](./08-mcp/) | **MCP 精选** | 开发/数据库/效率/通用工具类 MCP 完整指南 | 开发同学 |
 
 ---
 
@@ -88,6 +90,17 @@
 - [M6-02 ⭐️ 给 AI 喂上下文：项目文档规范](./06-ai-project-setup/02-ai-context.md)
 - [M6-03 MCP 项目集成](./06-ai-project-setup/03-mcp-integration.md)
 - [M6-04 ⭐️ 真实案例：全栈项目 AI 配置实战](./06-ai-project-setup/04-real-world-template.md)
+
+### M7 · Skills 精选
+- [M7-01 ⭐️ ChatGPT GPT Store 精选（开发向）](./07-skills/01-chatgpt-gpts.md)
+- [M7-02 ⭐️ Claude Projects 开发最佳实践](./07-skills/02-claude-projects.md)
+- [M7-03 ⭐️ Cursor Rules 社区精选](./07-skills/03-cursor-rules.md)
+
+### M8 · MCP 精选
+- [M8-01 ⭐️ 开发工具类 MCP](./08-mcp/01-dev-tools.md)
+- [M8-02 ⭐️ 数据库类 MCP](./08-mcp/02-database.md)
+- [M8-03 效率工具类 MCP](./08-mcp/03-productivity.md)
+- [M8-04 ⭐️ 通用工具类 MCP](./08-mcp/04-utilities.md)
 
 ---
 

@@ -67,6 +67,23 @@
 
 ---
 
+## M7 · Skills 精选
+
+* [⭐️ ChatGPT GPT Store 精选（开发向）](07-skills/01-chatgpt-gpts.md)
+* [⭐️ Claude Projects 开发最佳实践](07-skills/02-claude-projects.md)
+* [⭐️ Cursor Rules 社区精选](07-skills/03-cursor-rules.md)
+
+---
+
+## M8 · MCP 精选
+
+* [⭐️ 开发工具类 MCP](08-mcp/01-dev-tools.md)
+* [⭐️ 数据库类 MCP](08-mcp/02-database.md)
+* [效率工具类 MCP](08-mcp/03-productivity.md)
+* [⭐️ 通用工具类 MCP](08-mcp/04-utilities.md)
+
+---
+
 ## 📚 参考资源
 
 * [评测榜单 · 官方文档 · 学习资源](references.md)
