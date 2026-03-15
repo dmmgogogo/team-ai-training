@@ -52,6 +52,9 @@
 * [⭐️ Cursor 正确配置与高效使用](05-practical/06-cursor-setup.md)
 * [ChatGPT 正确配置与高效使用](05-practical/07-chatgpt-setup.md)
 * [Claude 正确配置与高效使用](05-practical/08-claude-setup.md)
+* [⭐️ AI 安全与数据隐私](05-practical/09-security-privacy.md)
+* [⭐️ 代码审查与质量控制](05-practical/10-code-review.md)
+* [⭐️ 成本管理与模型选型](05-practical/11-cost-management.md)
 
 ---
 
