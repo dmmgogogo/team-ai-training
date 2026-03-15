@@ -84,6 +84,14 @@
 
 ---
 
+## M9 · OpenClaw 小🦞
+
+* [⭐️ 什么是 OpenClaw](09-openclaw/01-intro.md)
+* [⭐️ 安装与配置](09-openclaw/02-setup.md)
+* [⭐️ Skills 与 MCP 接入](09-openclaw/03-skills-mcp.md)
+
+---
+
 ## 📚 参考资源
 
 * [评测榜单 · 官方文档 · 学习资源](references.md)

@@ -28,6 +28,7 @@
 | [M6](./06-ai-project-setup/) | **AI 项目配置规范** | .cursorrules、项目上下文文档、MCP 集成 | 开发同学 |
 | [M7](./07-skills/) | **Skills 精选** | GPT Store、Claude Projects、Cursor Rules 社区精选 | 所有人 |
 | [M8](./08-mcp/) | **MCP 精选** | 开发/数据库/效率/通用工具类 MCP 完整指南 | 开发同学 |
+| [M9](./09-openclaw/) | **OpenClaw 小🦞** | 自托管 AI 网关：Telegram/Discord 随时用 AI | 所有人 |
 
 ---
 
@@ -101,6 +102,11 @@
 - [M8-02 ⭐️ 数据库类 MCP](./08-mcp/02-database.md)
 - [M8-03 效率工具类 MCP](./08-mcp/03-productivity.md)
 - [M8-04 ⭐️ 通用工具类 MCP](./08-mcp/04-utilities.md)
+
+### M9 · OpenClaw 小🦞
+- [M9-01 ⭐️ 什么是 OpenClaw](./09-openclaw/01-intro.md)
+- [M9-02 ⭐️ 安装与配置](./09-openclaw/02-setup.md)
+- [M9-03 ⭐️ Skills 与 MCP 接入](./09-openclaw/03-skills-mcp.md)
 
 ---
 
