@@ -29,6 +29,7 @@
 | [M7](./07-skills/) | **Skills 精选** | GPT Store、Claude Projects、Cursor Rules 社区精选 | 所有人 |
 | [M8](./08-mcp/) | **MCP 精选** | 开发/数据库/效率/通用工具类 MCP 完整指南 | 开发同学 |
 | [M9](./09-openclaw/) | **OpenClaw 小🦞** | 自托管 AI 网关：Telegram/Discord 随时用 AI | 所有人 |
+| [M10](./10-cloud-agent/) | **AI Cloud Agent** | 云端 AI 工作流：持续运行、主动推送、自动执行 | 所有人 |
 
 ---
 
