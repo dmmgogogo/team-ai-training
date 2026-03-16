@@ -16,6 +16,38 @@
 
 ---
 
+## 方案零：直接用团队现成实例（最推荐新手）
+
+> **不需要任何配置**，团队已经用 Cursor 搭建了一套开箱即用的 Cloud Agent 实例，所有人都可以直接使用。
+
+### 访问地址
+
+🔗 **[https://vibe.iamxmm.xyz/dashboard](https://vibe.iamxmm.xyz/dashboard)**
+
+### 特点
+
+```
+✅ 零配置，打开即用
+✅ 基于 Cursor 搭建，体验与本地 Cursor Agent 一致
+✅ 团队共享实例，无需个人申请 API Key
+✅ 适合快速上手、体验 Cloud Agent 工作流
+```
+
+### 适合场景
+
+- 第一次尝试 Cloud Agent，不想折腾环境
+- 日常任务量不大，不值得单独维护一套工作流
+- 团队演示与协作
+
+### 使用建议
+
+1. 打开 Dashboard，用团队账号登录
+2. 创建一个新任务，参考 [M10-03 任务描述模板](./03-using-cloud-agent.md) 写好任务
+3. 提交后等待结果，支持异步通知
+4. 如果任务较复杂或涉及私有数据，再考虑下方的自建方案
+
+---
+
 ## 方案一：Claude Code（推荐）
 
 Claude Code 是 Anthropic 官方的命令行 Agent 工具，在本地或 CI 环境里跑。
@@ -253,15 +285,16 @@ jobs:
 
 ## 小结
 
-自建 Cloud Agent 工作流的三种选择：
+Cloud Agent 工作流的四种选择：
 
 | 方案 | 适合 | 上手难度 |
 |------|------|---------|
+| **团队共享实例** [vibe.iamxmm.xyz](https://vibe.iamxmm.xyz/dashboard) | 零配置，快速上手体验 | ⭐（推荐新手） |
 | Claude Code + CI/CD | 想集成到 GitHub Actions | ⭐⭐ |
-| ChatGPT Codex | 不想自己配置环境 | ⭐ |
+| ChatGPT Codex | 不想自己配置环境 | ⭐⭐ |
 | 自定义脚本 | 需要定制触发逻辑 | ⭐⭐⭐ |
 
-**原则：** 从最简单的方案开始，跑通一个任务再优化。
+**原则：** 从最简单的方案开始——先用团队实例跑通一个任务，再决定是否需要自建。
 
 ---
 
