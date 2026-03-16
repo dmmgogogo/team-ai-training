@@ -32,7 +32,8 @@
 | **DeepSeek V3.1** | 2025.8.30 | V3 升级版，SWE-bench 超 V3 **40%+** |
 | **DeepSeek V3.1-Terminus** | 2025.9.22 | V3.1 完整版，使用 DeepSeek Sparse Attention 新架构 |
 | **DeepSeek V3.2-Exp** | 2025.9.29 | 实验版，新架构持续探索 |
-| **DeepSeek V4** | 即将发布 | 社区消息，预计 2026 年内发布 |
+| **DeepSeek V4 Lite** | 2026.3.9 | 1T 参数，多模态，开源权重，静默发布 |
+| **DeepSeek V4** | 即将发布 | 完整版预计 2026 年 3 月内正式发布 |
 
 > 📌 **来源：** [Wikipedia - DeepSeek](https://en.wikipedia.org/wiki/DeepSeek)
 

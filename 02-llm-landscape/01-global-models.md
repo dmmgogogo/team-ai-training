@@ -117,7 +117,8 @@
 
 | 模型 | 发布 | 特点 |
 |------|------|------|
-| **Gemini 3 Flash** | 2026.1 🔥 | 最新一代轻量模型 |
+| **Gemini 3 Flash** | 2026.1 | 最新一代轻量模型 |
+| **Gemini 3.1 Pro** | 2026.3 🔥 | SWE-bench **80.6%**，代码能力直逼 Claude Opus |
 
 > 📌 注意：Gemini 2.5 Pro 和 2.5 Flash 计划于 **2026.6.17 停用**，届时将由新版本替代。
 >
@@ -201,7 +202,7 @@
 
 | 维度 | 最强推荐 |
 |------|---------|
-| 代码能力 | Claude Sonnet 4.6，o3，DeepSeek V3 |
+| 代码能力 | Claude Opus 4.5（80.9%）、Gemini 3.1 Pro（80.6%）、MiniMax M2.5（80.2%） |
 | 推理/数学 | o3，Gemini 2.5 Pro，DeepSeek R1 |
 | 创意写作 | Claude Opus 4.6，GPT-4o |
 | 超长文本 | Llama 4 Scout（1000万Token），Gemini 2.5 Pro |

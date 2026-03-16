@@ -45,7 +45,7 @@ AI 编程工具
 | **Cursor** | IDE | Claude / GPT-4 | $20/月 | 市场领导者，360K付费用户 |
 | **Windsurf** | IDE | Claude / DeepSeek | $15/月（个人免费） | Cascade 自动任务，性价比最优 |
 | **GitHub Copilot** | 插件 | GPT-4o | $10/月 | 最便宜入门，JetBrains 支持好 |
-| **Claude Code** | CLI | Claude Sonnet | API 计费 | SWE-bench 第一（80.9%） |
+| **Claude Code** | CLI | Claude Opus/Sonnet | API 计费 | SWE-bench 第一（Opus 4.5 80.9%） |
 | **Codex CLI** | CLI | o3/o4-mini | API 计费 | 速度快（240+ tok/s） |
 | **Gemini CLI** | CLI | Gemini | **完全免费开源** | 唯一零成本 CLI |
 | **Aider** | CLI | 多模型 | 开源+模型费 | 支持 100+ 模型含本地 |
@@ -72,7 +72,8 @@ AI 编程工具
 ## 2026年市场关键数据
 
 - **Cursor**：市场领导者，$500M+ ARR，360K 付费用户
-- **Claude Code**：SWE-bench 评测第一（80.9%），代码能力最强
+- **Claude Code**：SWE-bench Verified 评测第一（Claude Opus 4.5 达 80.9%），代码能力最强
+- **Gemini 3.1 Pro**：SWE-bench 80.6%，Google 首次进入代码榜前三
 - **Codex CLI**：Terminal-Bench 第二（77.3%），速度最快（240+ tok/s）
 - **Windsurf**：个人版免费，agentic 类别最佳性价比
 - **Copilot**：$10/月，最便宜的有 Git 深度集成的方案
