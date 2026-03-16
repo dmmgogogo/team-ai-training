@@ -1,24 +1,68 @@
-# ⭐️ M6-01 · .cursorrules 配置指南
+# ⭐️ M6-01 · Cursor Rules 配置指南
 
-> `.cursorrules` 是放在项目根目录的文件，Cursor 每次生成代码前都会读它。写好这个文件，AI 就知道你的项目是什么、规范是什么，不用每次重复说。
+> Cursor Rules 是放在 `.cursor/rules/` 目录下的 `.mdc` 文件，Cursor 每次生成代码前都会根据规则自动加载。写好这些规则，AI 就知道你的项目是什么、规范是什么，不用每次重复说。
 
 ---
 
-## 为什么要配 .cursorrules？
+## 为什么要配 Cursor Rules？
 
-没有 .cursorrules 时，AI 每次都在"猜"你的项目：
+没有规则时，AI 每次都在"猜"你的项目：
 - 不知道你用 Vue 2 还是 Vue 3
 - 不知道你的 UniApp 是编译到小程序还是 H5
 - 不知道你的 Flutter 用哪个状态管理
 - 不知道团队的命名规范
 
-**有了 .cursorrules，AI 一进项目就了解全貌，输出直接符合规范。**
+**有了 Cursor Rules，AI 一进项目就了解全貌，输出直接符合规范。**
 
 ---
 
-## Vue 项目 .cursorrules 模板
+## 新旧方式对比
 
-```markdown
+| 对比项 | `.cursorrules`（旧，已废弃） | `.cursor/rules/*.mdc`（新，推荐） |
+|--------|--------------------------|----------------------------------|
+| 状态 | 向后兼容，不再维护 | 当前官方推荐 |
+| 作用范围 | 全局，无法控制 | 可设置触发条件 |
+| 文件数量 | 只能一个文件 | 多文件，按功能拆分 |
+| 条件触发 | 不支持 | 支持按文件 glob 自动匹配 |
+
+**新项目直接用 `.cursor/rules/`；老项目有 `.cursorrules` 的，建议迁移。**
+
+---
+
+## .mdc 文件格式
+
+每个 `.mdc` 文件顶部有一段 frontmatter，控制规则的触发方式：
+
+```
+---
+description: 规则描述（Agent Requested 模式时 AI 看这段来决定是否加载）
+globs: src/**/*.vue, src/**/*.ts   # Auto Attached 模式：匹配这些文件时自动加载
+alwaysApply: true                  # Always 模式：每次对话都加载
+---
+
+规则正文（Markdown 格式）
+```
+
+**四种触发模式：**
+
+| 模式 | 配置方式 | 适合场景 |
+|------|---------|---------|
+| Always | `alwaysApply: true` | 全局规范，每次都需要 |
+| Auto Attached | 填写 `globs` | 只在修改特定文件时生效 |
+| Agent Requested | 填写 `description`，不填 globs | AI 自行判断是否需要加载 |
+| Manual | 什么都不填 | 手动用 `@ruleName` 引用 |
+
+---
+
+## Vue 项目配置示例
+
+文件：`.cursor/rules/vue-project.mdc`
+
+```
+---
+alwaysApply: true
+---
+
 # 项目说明
 这是一个 Vue 3 项目，使用 Composition API（不用 Options API）。
 状态管理使用 Pinia，路由使用 Vue Router 4。
@@ -44,9 +88,15 @@ UI 组件库：Element Plus。
 
 ---
 
-## UniApp 项目 .cursorrules 模板
+## UniApp 项目配置示例
 
-```markdown
+文件：`.cursor/rules/uniapp-project.mdc`
+
+```
+---
+alwaysApply: true
+---
+
 # 项目说明
 这是一个 UniApp 项目，主要编译目标：微信小程序 + H5。
 使用 Vue 3 + setup 语法糖。
@@ -71,9 +121,15 @@ UI 组件库：uni-ui。
 
 ---
 
-## Flutter 项目 .cursorrules 模板
+## Flutter 项目配置示例
 
-```markdown
+文件：`.cursor/rules/flutter-project.mdc`
+
+```
+---
+alwaysApply: true
+---
+
 # 项目说明
 这是一个 Flutter 项目，目标平台：iOS + Android。
 Dart 版本：3.x，使用 null safety。
@@ -101,9 +157,15 @@ Dart 版本：3.x，使用 null safety。
 
 ---
 
-## Golang 后端项目 .cursorrules 模板
+## Golang 后端项目配置示例
 
-```markdown
+文件：`.cursor/rules/golang-project.mdc`
+
+```
+---
+alwaysApply: true
+---
+
 # 项目说明
 这是一个 Golang 后端项目，Go 版本 1.21+。
 Web 框架：Gin。
@@ -142,9 +204,13 @@ pkg/          # 可复用的公共库
 
 ## 通用补充规则（所有项目都加）
 
-在每个模板末尾加上这段，效果很好：
+单独建一个文件：`.cursor/rules/ai-collaboration.mdc`
 
-```markdown
+```
+---
+alwaysApply: true
+---
+
 # AI 协作约定
 - 我的问题如果不清晰，先问我再动手
 - 修改已有代码时，只改必要部分，不要重构无关代码
@@ -154,12 +220,14 @@ pkg/          # 可复用的公共库
 
 ---
 
-## 如何在团队中共享 .cursorrules
+## 如何在团队中共享 Rules
 
-1. 把 `.cursorrules` 提交到 Git 仓库（不要加入 .gitignore）
+1. 将 `.cursor/rules/` 目录提交到 Git 仓库（不要加入 `.gitignore`）
 2. 团队所有人 clone 后自动生效
-3. 项目规范变更时，同步更新这个文件
-4. 建议在 README 里说明"本项目已配置 .cursorrules，请使用 Cursor 开发"
+3. 项目规范变更时，同步更新对应的 `.mdc` 文件
+4. 建议在 README 里说明"本项目已配置 Cursor Rules，请使用 Cursor 开发"
+
+> 如果项目里还有旧的 `.cursorrules` 文件，迁移完成后可以直接删除。
 
 ---
 
