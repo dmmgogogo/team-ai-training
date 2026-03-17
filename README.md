@@ -86,6 +86,7 @@
 - [M5-09 ⭐️ AI 安全与数据隐私](./05-practical/09-security-privacy.md)
 - [M5-10 ⭐️ 代码审查与质量控制](./05-practical/10-code-review.md)
 - [M5-11 ⭐️ 成本管理与模型选型](./05-practical/11-cost-management.md)
+- [M5-12 ⭐️ Token 节省工具：rtk 实战指南](./05-practical/12-token-saving-tools.md)
 
 ### M6 · AI 项目配置规范
 - [M6-01 ⭐️ .cursorrules 配置指南](./06-ai-project-setup/01-cursorrules.md)
