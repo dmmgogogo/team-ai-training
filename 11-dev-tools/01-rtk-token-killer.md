@@ -1,4 +1,4 @@
-# M5-12 · Token 节省工具：rtk 实战指南
+# M11-01 · rtk：Token 节省利器
 
 > AI 编程助手每次调用命令都会消耗大量 token。`rtk`（Rust Token Killer）是一个 CLI 代理工具，将 `git status`、`cargo test`、`ls` 等常见命令的输出压缩过滤后再送给 AI，**单次会话可节省 60-90% 的 token 消耗**。
 
@@ -31,7 +31,7 @@ AI 编程助手（Cursor、Claude Code 等）在运行命令时，会把**完整
 | git diff | 5次 | 10,000 | 2,500 | -75% |
 | git add/commit/push | 8次 | 1,600 | 120 | **-92%** |
 | cargo test / npm test | 5次 | 25,000 | 2,500 | **-90%** |
-| **合计** | **~118,000** | **~23,900** | **-80%** | |
+| **合计** | | **~118,000** | **~23,900** | **-80%** |
 
 ---
 
@@ -184,5 +184,5 @@ exclude_commands = ["curl", "playwright"]  # 这些命令不拦截
 
 ## 下一步
 
-- [M5-11 ⭐️ 成本管理与模型选型](./11-cost-management.md)
+- [M5-11 ⭐️ 成本管理与模型选型](../05-practical/11-cost-management.md)
 - [M6-01 ⭐️ Cursor Rules 配置指南](../06-ai-project-setup/01-cursorrules.md)

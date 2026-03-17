@@ -30,6 +30,7 @@
 | [M8](./08-mcp/) | **MCP 精选** | 开发/数据库/效率/通用工具类 MCP 完整指南 | 开发同学 |
 | [M9](./09-openclaw/) | **OpenClaw 小🦞** | 自托管 AI 网关：Telegram/Discord 随时用 AI | 所有人 |
 | [M10](./10-cloud-agent/) | **AI Cloud Agent** | 云端 AI 工作流：持续运行、主动推送、自动执行 | 所有人 |
+| [M11](./11-dev-tools/) | **开发提效工具** | Token 节省、上下文压缩等 AI 开发效率工具精选 | 开发同学 |
 
 ---
 
@@ -86,7 +87,6 @@
 - [M5-09 ⭐️ AI 安全与数据隐私](./05-practical/09-security-privacy.md)
 - [M5-10 ⭐️ 代码审查与质量控制](./05-practical/10-code-review.md)
 - [M5-11 ⭐️ 成本管理与模型选型](./05-practical/11-cost-management.md)
-- [M5-12 ⭐️ Token 节省工具：rtk 实战指南](./05-practical/12-token-saving-tools.md)
 
 ### M6 · AI 项目配置规范
 - [M6-01 ⭐️ .cursorrules 配置指南](./06-ai-project-setup/01-cursorrules.md)
@@ -116,6 +116,10 @@
 - [M10-02 ⭐️ Cloud Agent 工作原理](./10-cloud-agent/02-how-it-works.md)
 - [M10-03 ⭐️ 如何使用 Cloud Agent（实战）](./10-cloud-agent/03-using-cloud-agent.md)
 - [M10-04 自建 Cloud Agent 工作流](./10-cloud-agent/04-build-your-own.md)
+
+### M11 · 开发提效工具
+
+- [M11-01 ⭐️ rtk：Token 节省利器](./11-dev-tools/01-rtk-token-killer.md)
 
 ---
 
