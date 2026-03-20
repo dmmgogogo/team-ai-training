@@ -72,6 +72,7 @@
 * [⭐️ ChatGPT GPT Store 精选（开发向）](07-skills/01-chatgpt-gpts.md)
 * [⭐️ Claude Projects 开发最佳实践](07-skills/02-claude-projects.md)
 * [⭐️ Cursor Rules 社区精选](07-skills/03-cursor-rules.md)
+* [⭐️ OpenCLI：将网站转换为 CLI 工具](07-skills/04-opencli.md)
 
 ---
 

@@ -98,6 +98,7 @@
 - [M7-01 ⭐️ ChatGPT GPT Store 精选（开发向）](./07-skills/01-chatgpt-gpts.md)
 - [M7-02 ⭐️ Claude Projects 开发最佳实践](./07-skills/02-claude-projects.md)
 - [M7-03 ⭐️ Cursor Rules 社区精选](./07-skills/03-cursor-rules.md)
+- [M7-04 ⭐️ OpenCLI：将网站转换为 CLI 工具](./07-skills/04-opencli.md)
 
 ### M8 · MCP 精选
 - [M8-01 ⭐️ 开发工具类 MCP](./08-mcp/01-dev-tools.md)

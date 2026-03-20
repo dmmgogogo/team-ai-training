@@ -19,6 +19,7 @@
 | [M7-01 ⭐️](./01-chatgpt-gpts.md) | **ChatGPT GPT Store 精选（开发向）** | 开发场景下的 GPT 精选与使用 |
 | [M7-02 ⭐️](./02-claude-projects.md) | **Claude Projects 开发最佳实践** | 创建与复用 Claude 项目 |
 | [M7-03 ⭐️](./03-cursor-rules.md) | **Cursor Rules 社区精选** | 优质 Cursor 规则与导入方式 |
+| [M7-04 ⭐️](./04-opencli.md) | **OpenCLI：将网站转换为 CLI 工具** | AI 辅助的网站 CLI 化工具 |
 
 ---
 
