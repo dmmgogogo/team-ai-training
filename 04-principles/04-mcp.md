@@ -99,7 +99,8 @@ mcp://filesystem/home/user/docs/
 
 ## 配置示例（Claude Desktop）
 
-`~/.config/claude/claude_desktop_config.json`:
+**macOS** 配置文件路径：`~/Library/Application Support/Claude/claude_desktop_config.json`  
+**Linux** 配置文件路径：`~/.config/claude/claude_desktop_config.json`
 
 ```json
 {
@@ -138,7 +139,8 @@ server = Server("my-company-tools")
 async def query_employee(employee_id: str) -> str:
     """查询员工信息"""
     # 连接内部数据库
-    employee = db.query(f"SELECT * FROM employees WHERE id = {employee_id}")
+    # 使用参数化查询，避免 SQL 注入
+    employee = db.query("SELECT * FROM employees WHERE id = %s", (employee_id,))
     return employee.to_json()
 
 @server.tool()

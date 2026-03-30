@@ -10,37 +10,37 @@
 你的需求是什么？
 │
 ├─ 数据必须留在内网？
-│   └─ YES → 本地部署 → Llama 3.3 / DeepSeek R1 / Qwen2.5
+│   └─ YES → 本地部署 → Llama 3.x / DeepSeek R1 / Qwen3
 │
 ├─ 主要是写代码？
 │   ├─ 需要编辑器内嵌 → Cursor / Copilot / Windsurf
-│   └─ 需要 API 调用 → Claude 3.5 Sonnet / DeepSeek V3
+│   └─ 需要 API 调用 → Claude Sonnet 4.x / DeepSeek V3.1
 │
 ├─ 需要处理超长文档？
-│   ├─ 国内首选 → Kimi（200万Token）
-│   └─ 国际首选 → Gemini 1.5 Pro（200万Token）
+│   ├─ 国内首选 → Kimi（200万Token）/ MiniMax M1（100万Token）
+│   └─ 国际首选 → Gemini 2.5 Pro（200万Token）
 │
 ├─ 复杂推理/数学？
-│   ├─ 国际 → o3 / Claude 3.7 Sonnet（Thinking）
-│   └─ 国内 → DeepSeek R1 / QwQ-32B
+│   ├─ 国际 → o3 / Claude 3.7 Sonnet（Extended Thinking）
+│   └─ 国内 → DeepSeek R1 / MiniMax M1 / QwQ-32B
 │
 ├─ 成本敏感？
-│   ├─ 国内低成本 → DeepSeek V3 / Qwen-Plus
-│   └─ 国际低成本 → Gemini Flash / Claude Haiku / GPT-4o mini
+│   ├─ 国内低成本 → MiniMax M2.5 / DeepSeek V3.1 / Qwen3-Plus
+│   └─ 国际低成本 → Gemini 2.0 Flash / Claude Haiku / GPT-4o mini
 │
 └─ 多模态（图片/视频）？
-    ├─ 国际 → GPT-4o / Gemini 2.0
-    └─ 国内 → Qwen-VL / 文心一格
+    ├─ 国际 → GPT-4o / Gemini 2.5
+    └─ 国内 → Qwen3-VL / Hailuo（MiniMax视频）
 ```
 
 ---
 
 ## 能力雷达图（主观评分，满分 5）
 
-| 维度 | GPT-4o | Claude 3.5 | Gemini Pro | DeepSeek V3 | Qwen2.5 |
-|------|--------|------------|------------|-------------|---------|
+| 维度 | GPT-4o | Claude Sonnet | Gemini 2.x | DeepSeek V3.1 | Qwen3 |
+|------|--------|---------------|------------|---------------|-------|
 | 代码 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
-| 推理 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ |
+| 推理 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
 | 中文 | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
 | 创意写作 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ |
 | 长文本 | ⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
@@ -55,9 +55,9 @@
 
 ### 👨‍💻 开发者日常编码
 
-**首选：** Claude 3.5/3.7 Sonnet（通过 Cursor）  
-**备选：** DeepSeek V3（性价比，国内直连）  
-**理由：** Claude 代码能力最强，Cursor 集成最好；DeepSeek 性价比无敌
+**首选：** Claude Sonnet 4.x（通过 Cursor）  
+**备选：** DeepSeek V3.1 / MiniMax M2.5（性价比，国内直连）  
+**理由：** Claude 代码能力最强，Cursor 集成最好；DeepSeek/MiniMax 性价比极高
 
 ---
 
@@ -71,8 +71,8 @@
 
 ### 📄 长文档分析（合同、报告、书籍）
 
-**首选：** Kimi（200万Token，国内直连）  
-**国际首选：** Gemini 1.5 Pro  
+**首选：** Kimi（200万Token，国内直连）/ MiniMax M1（100万Token）  
+**国际首选：** Gemini 2.5 Pro  
 **理由：** 超长上下文是核心能力
 
 ---
@@ -80,7 +80,7 @@
 ### 🔢 数学 / 复杂推理
 
 **首选：** o3 / DeepSeek R1  
-**备选：** Claude 3.7 Extended Thinking  
+**备选：** Claude 3.7 Extended Thinking / MiniMax M1  
 **理由：** 专为推理优化，慢思考大幅提升准确率
 
 ---
@@ -102,18 +102,19 @@
 
 ---
 
-## API 价格参考（2025 年，仅供参考）
+## API 价格参考（2026年3月，仅供参考，以官方定价页为准）
 
 > 单位：每百万 Token（人民币）
 
 | 模型 | 输入价格 | 输出价格 |
 |------|---------|---------|
-| DeepSeek V3 | ¥1 | ¥4 |
-| Qwen-Plus | ¥4 | ¥12 |
-| Claude 3.5 Haiku | ¥6 | ¥30 |
+| MiniMax M2.5 | ¥0.8 | ¥3.2 |
+| DeepSeek V3.1 | ¥2 | ¥8 |
+| Qwen3-Plus | ¥4 | ¥12 |
+| Claude Haiku 3.5 | ¥6 | ¥30 |
 | GPT-4o mini | ¥11 | ¥44 |
-| Gemini 1.5 Flash | ¥3 | ¥12 |
-| Claude 3.5 Sonnet | ¥22 | ¥110 |
+| Gemini 2.0 Flash | ¥2 | ¥8 |
+| Claude Sonnet 4 | ¥22 | ¥110 |
 | GPT-4o | ¥18 | ¥72 |
 | o3 | ¥110 | ¥440 |
 
@@ -138,12 +139,12 @@
 ## 快速决策总结
 
 ```
-预算有限 + 国内使用 → DeepSeek V3
-代码开发 → Claude 3.5 Sonnet（via Cursor）
+预算有限 + 国内使用 → MiniMax M2.5 / DeepSeek V3.1
+代码开发 → Claude Sonnet 4.x（via Cursor）
 推理/数学 → DeepSeek R1 或 o3
-长文档 → Kimi
-数据合规/私有化 → 本地部署 DeepSeek R1 / Qwen
-多模态 → GPT-4o 或 Gemini
+长文档 → Kimi / MiniMax M1
+数据合规/私有化 → 本地部署 DeepSeek R1 / Qwen3
+多模态 → GPT-4o 或 Gemini 2.5
 ```
 
 ---
