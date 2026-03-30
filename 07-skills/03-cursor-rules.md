@@ -7,10 +7,12 @@
 
 ## 如何使用
 
-1. 在项目根目录创建 `.cursorrules` 文件
-2. 粘贴对应模板内容
+1. 在项目 `.cursor/rules/` 目录下创建 `.mdc` 文件（如 `project.mdc`）
+2. 粘贴对应模板内容（规则正文部分）
 3. 按项目实际情况修改（框架版本、命名规范等）
 4. 提交到 Git，团队共享
+
+> 旧版 `.cursorrules`（根目录单文件）仍可使用，但新项目推荐用 `.cursor/rules/*.mdc` 格式，支持多文件和条件触发。详见 [M6-01](../06-ai-project-setup/01-cursorrules.md)。
 
 ---
 

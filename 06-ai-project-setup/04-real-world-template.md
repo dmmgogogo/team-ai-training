@@ -38,7 +38,7 @@ project-root/
 | AI 工具 | 读取的文件 | 说明 |
 |---------|-----------|------|
 | **Claude Code（命令行）** | `CLAUDE.md` | 自动向上查找，读最近的 CLAUDE.md |
-| **Cursor** | `.cursorrules` | 项目根目录配置 |
+| **Cursor** | `.cursor/rules/*.mdc` | 项目 `.cursor/rules/` 目录，推荐新格式（旧 `.cursorrules` 仍兼容） |
 | **WARP / Codex** | `AGENTS.md` | 项目整体说明 |
 | **ChatGPT / Claude（网页）** | 手动 `@` 引用 | 需要在对话中主动引用 |
 
@@ -133,14 +133,14 @@ rm -rf frontend/vben-admin # 不需要管理后台
 
 ## 对比：.cursorrules vs CLAUDE.md
 
-| 对比项 | `.cursorrules` | `CLAUDE.md` |
-|--------|---------------|-------------|
+| 对比项 | `.cursor/rules/*.mdc`（新） / `.cursorrules`（旧兼容） | `CLAUDE.md` |
+|--------|------------------------------------------------------|-------------|
 | **适用工具** | Cursor | Claude Code (CLI) |
-| **支持多文件** | 只有一个 | 每个目录一个，自动层级读取 |
+| **支持多文件** | `.mdc` 支持多文件按功能拆分；`.cursorrules` 只有一个 | 每个目录一个，自动层级读取 |
 | **跟模块移动** | ❌ 在根目录 | ✅ 随模块走 |
 | **推荐场景** | Cursor 为主的团队 | Claude Code 为主的团队 |
 
-**最佳实践：两个都配。** 同一个项目同时有 `.cursorrules` 和 `CLAUDE.md`，覆盖不同工具。
+**最佳实践：两个都配。** 同一个项目同时有 `.cursor/rules/`（或 `.cursorrules`）和 `CLAUDE.md`，覆盖不同工具。
 
 ---
 
