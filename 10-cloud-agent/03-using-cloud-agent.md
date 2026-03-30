@@ -175,7 +175,7 @@ Normal / Agent / Background Agent
 
 ```
 优点：与 GitHub Issue 深度集成，从 Issue 到 PR 一键完成
-缺点：目前仍在 Preview 阶段，功能相对基础
+缺点：功能相对基础，适合轻量任务
 适合：GitHub 重度用户，从 Issue 驱动开发的团队
 ```
 

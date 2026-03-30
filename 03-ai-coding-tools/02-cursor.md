@@ -103,12 +103,16 @@ Cursor 会自动操作多个文件，一次性完成任务。
 | `@git` | 引用 Git 历史 |
 | `#终端输出` | 引用终端错误信息 |
 
-### .cursorrules 文件
+### Cursor Rules 文件
 
-在项目根目录创建 `.cursorrules` 文件，给 Cursor 写项目规则：
+推荐在 `.cursor/rules/` 目录下创建 `.mdc` 文件，给 Cursor 写项目规则（旧版 `.cursorrules` 仍兼容但不再推荐）：
 
 ```
-.cursorrules 示例：
+.cursor/rules/project.mdc 示例：
+
+---
+alwaysApply: true
+---
 
 You are an expert in Python FastAPI.
 - Always use async/await
@@ -118,7 +122,7 @@ You are an expert in Python FastAPI.
 - Write tests for all new functions
 ```
 
-这样 Cursor 在这个项目里就会按你的规范写代码。
+这样 Cursor 在这个项目里就会按你的规范写代码。详见 [M6-01 Cursor Rules 配置指南](../06-ai-project-setup/01-cursorrules.md)。
 
 ---
 
@@ -150,7 +154,7 @@ You are an expert in Python FastAPI.
 | 计划 | 价格 | 内容 |
 |------|------|------|
 | Free | 免费 | 有限 Claude 使用次数 |
-| Pro | $20/月 | 无限制，含 GPT-4o + Claude Sonnet |
+| Pro | $20/月 | 无限制，含最新主流模型（以官方订阅页为准） |
 | Business | $40/月/人 | 团队管理，数据隐私，可关闭数据收集 |
 
 > 💡 团队购买 Business 计划可以关闭"改善产品"数据收集。
