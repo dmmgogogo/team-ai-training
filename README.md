@@ -4,7 +4,7 @@
 >
 > 📌 本课程持续更新，建议收藏。欢迎提 Issue 反馈或补充内容。
 >
-> 🕐 最近更新：2026-03-30 — 修复各模块目录链接 404；更新模型选型/价格表至 2026-03；统一 Cursor Rules 写法为 .cursor/rules/*.mdc；新增团队 Cloud Agent 实例入口
+> 🕐 最近更新：2026-04-05 — M11 新增 OpenCLI 项目资料（CLI Hub 实战）；修复各模块目录链接 404；更新模型选型/价格表至 2026-03；统一 Cursor Rules 写法为 .cursor/rules/*.mdc；新增团队 Cloud Agent 实例入口
 
 ---
 
@@ -123,6 +123,7 @@
 ### M11 · 开发提效工具
 
 - [M11-01 ⭐️ rtk：Token 节省利器](./11-dev-tools/01-rtk-token-killer.md)
+- [M11-02 ⭐️ OpenCLI：把网站和本地工具统一成 CLI Hub](./11-dev-tools/02-opencli-cli-hub.md)
 
 ---
 
