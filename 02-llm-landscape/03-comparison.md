@@ -102,21 +102,22 @@
 
 ---
 
-## API 价格参考（2026年3月，仅供参考，以官方定价页为准）
+## API 价格参考（更新至 2026-04，官方定价页，USD）
 
-> 单位：每百万 Token（人民币）
+> 单位：每百万 Token（USD），默认按 **Standard** 档；厂商可能随时调整，以官方定价页为准。
 
-| 模型 | 输入价格 | 输出价格 |
-|------|---------|---------|
-| MiniMax M2.5 | ¥0.8 | ¥3.2 |
-| DeepSeek V3.1 | ¥2 | ¥8 |
-| Qwen3-Plus | ¥4 | ¥12 |
-| Claude Haiku 3.5 | ¥6 | ¥30 |
-| GPT-4o mini | ¥11 | ¥44 |
-| Gemini 2.0 Flash | ¥2 | ¥8 |
-| Claude Sonnet 4 | ¥22 | ¥110 |
-| GPT-4o | ¥18 | ¥72 |
-| o3 | ¥110 | ¥440 |
+| 模型 | 输入（/1M tokens） | 输出（/1M tokens） |
+|------|------------------|------------------|
+| GPT-4o | $2.5 | $10 |
+| GPT-4o mini | $0.15 | $0.6 |
+| o3 | $2 | $8 |
+| Claude Sonnet 4 | $3 | $15 |
+| Claude Haiku 4.5 | $1 | $5 |
+| Gemini 2.5 Pro | $1.25（<=200k prompt） | $10（<=200k prompt） |
+| Gemini 2.5 Flash | $0.30（text/image/video） | $2.50 |
+| DeepSeek-V3.2（deepseek-chat） | $0.28（cache miss） / $0.028（cache hit） | $0.42 |
+
+> 说明：Gemini 的输入价格会因 prompt 是否超过 200k、以及音频等模态而不同；DeepSeek 输入价格区分 cache hit/miss。更完整的价格和档位请看 `references.md` 的官方定价入口。
 
 ---
 

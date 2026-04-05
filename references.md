@@ -1,7 +1,7 @@
 # 📚 参考资源与链接索引
 
 > 本页汇总课程中所有引用的外部资源，均为真实可访问链接，定期验证更新。
-> 最后更新：2026年3月
+> 最后更新：2026年4月（2026-04-05）
 
 ---
 
@@ -102,9 +102,10 @@
 | 工具 | 地址 | 说明 |
 |------|------|------|
 | **Artificial Analysis 价格榜** | [artificialanalysis.ai/models](https://artificialanalysis.ai/models) | 实时更新，含速度/延迟/价格综合对比 |
-| **OpenAI Pricing** | [openai.com/api/pricing](https://openai.com/api/pricing) | OpenAI 官方价格 |
+| **OpenAI Pricing** | [platform.openai.com/docs/pricing](https://platform.openai.com/docs/pricing) | OpenAI 官方价格（最权威，含 batch/flex/priority） |
 | **Anthropic Pricing** | [anthropic.com/pricing](https://www.anthropic.com/pricing) | Anthropic 官方价格 |
-| **DeepSeek Pricing** | [platform.deepseek.com/api-docs/pricing](https://platform.deepseek.com/api-docs/pricing) | DeepSeek 官方价格 |
+| **Google Gemini Pricing** | [ai.google.dev/pricing](https://ai.google.dev/pricing) | Gemini 官方价格（含 >200k prompt、缓存、grounding） |
+| **DeepSeek Pricing** | [api-docs.deepseek.com/quick_start/pricing](https://api-docs.deepseek.com/quick_start/pricing/) | DeepSeek 官方价格（含 cache hit/miss） |
 
 ---
 
