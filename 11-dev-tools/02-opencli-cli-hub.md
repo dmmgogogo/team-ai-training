@@ -60,6 +60,35 @@ opencli bilibili hot --limit 5
 
 ---
 
+## 3 分钟演示流程（复制即用）
+
+下面这组命令适合团队培训现场演示：先验证环境，再跑一个公开数据命令，最后输出机器可读结果。
+
+```bash
+# Step 1: 安装（已安装可跳过）
+npm install -g @jackwener/opencli
+
+# Step 2: 健康检查
+opencli doctor
+
+# Step 3: 查看可用能力
+opencli list
+
+# Step 4: 运行公开数据命令（无需登录）
+opencli hackernews top --limit 5
+
+# Step 5: 输出 JSON，便于程序消费
+opencli hackernews top --limit 5 -f json
+```
+
+如果要演示“浏览器会话复用”，可加一条（需先在 Chrome/Chromium 登录目标站点）：
+
+```bash
+opencli bilibili hot --limit 5
+```
+
+---
+
 ## 团队常见用法
 
 ## A. 统一命令发现入口
