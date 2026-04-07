@@ -8,6 +8,8 @@
 
 - [M11-01 ⭐️ rtk：Token 节省利器](./01-rtk-token-killer.md)
 - [M11-02 ⭐️ OpenCLI：把网站和本地工具统一成 CLI Hub](./02-opencli-cli-hub.md)
+- [M11-03 ⭐️ Superpowers：AI 编程 Agent 完整开发工作流](./03-superpowers.md)
+- [M11-04 ⭐️ gstack：YC CEO 的 AI 软件工厂](./04-gstack.md)
 
 ---
 
