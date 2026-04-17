@@ -50,7 +50,8 @@ def update_month_markers(text: str, current_month_zh: str) -> tuple[str, int]:
 def update_readme_day_marker(text: str, current_day_iso: str) -> tuple[str, int]:
     # Match "最近更新：2026-04-12" in README top line.
     pattern = re.compile(r"(最近更新：)\d{4}-\d{2}-\d{2}")
-    new_text, count = pattern.subn(rf"\1{current_day_iso}", text)
+    # Use \g<1> to avoid ambiguity with numeric backreferences.
+    new_text, count = pattern.subn(rf"\g<1>{current_day_iso}", text)
     return new_text, count
 
 
