@@ -1,110 +1,94 @@
 # M3-01 · AI 编程工具全景概览
 
-> 最后更新：2026年4月。AI 编程工具市场竞争激烈，新工具持续涌现。
+> P26年4月。  
+> 本页采用“稳态信息”维护：保留工具定位与使用建议，删除易失真硬编码数据（如固定跑分、用户数、ARR）。
 
 ---
 
-## 工具分类（2026年现状）
+## 工具分类（长期有效版）
 
 ```
 AI 编程工具
 │
-├── 编辑器/IDE 类（代码编辑主战场）
-│   ├── Cursor          — AI 原生 IDE，市场领导者（$500M+ ARR）
-│   ├── Windsurf        — Codeium 出品，agentic 能力强，个人免费
-│   ├── GitHub Copilot  — 老牌，VS Code + JetBrains 全覆盖
-│   └── Zed             — 性能优先，内置 AI，原生多人协作
+├── IDE / 编辑器类（主战场）
+│   ├── Cursor
+│   ├── Windsurf
+│   ├── GitHub Copilot
+│   └── Zed / Continue（插件形态）
 │
-├── 终端/CLI 类（命令行直接对话）
-│   ├── Claude Code     — SWE-bench 最高（80.9%），能力最强
-│   ├── OpenAI Codex CLI — o3/o4 驱动，Terminal-bench 第二（77.3%）
-│   ├── Gemini CLI      — 完全免费开源，Google 出品
-│   └── Aider           — 开源，支持多模型，含本地模型
+├── CLI / 终端类（自动化和批处理友好）
+│   ├── Claude Code
+│   ├── OpenAI Codex CLI
+│   ├── Gemini CLI
+│   └── Aider
 │
-├── 自定义 Agent 类（BYOM，自带模型）
-│   ├── Cline           — VS Code 插件，开源
-│   ├── Kilo Code       — 轻量级
-│   └── OpenCode        — 新兴
+├── Agent 构建类（高度自定义）
+│   ├── Cline
+│   ├── Kilo Code
+│   └── OpenCode
 │
-├── 网页/聊天类
-│   ├── v0 by Vercel    — 前端 UI 生成最强
-│   └── Lovable AI      — 全栈应用生成
-│
-└── 新兴工具（2025-2026）
-    ├── Antigravity     — 完全免费（预览期无付费计划）
-    ├── Kimi Code       — 月之暗面出品，开源，可自部署
-    └── Kiro（AWS）     — Amazon 出品，企业向
+└── 生成式应用类（偏产品和原型）
+    ├── v0
+    └── Lovable
 ```
 
 ---
 
-## 主流工具对比表（2026年4月）
+## 主流工具对比（稳态维度）
 
-| 工具 | 类型 | 底层模型 | 价格 | 特色 |
-|------|------|---------|------|------|
-| **Cursor** | IDE | Claude / GPT-4 | $20/月 | 市场领导者，360K付费用户 |
-| **Windsurf** | IDE | Claude / DeepSeek | $15/月（个人免费） | Cascade 自动任务，性价比最优 |
-| **GitHub Copilot** | 插件 | GPT-4o | $10/月 | 最便宜入门，JetBrains 支持好 |
-| **Claude Code** | CLI | Claude Opus/Sonnet | API 计费 | SWE-bench 第一（Opus 4.5 80.9%） |
-| **Codex CLI** | CLI | o3/o4-mini | API 计费 | 速度快（240+ tok/s） |
-| **Gemini CLI** | CLI | Gemini | **完全免费开源** | 唯一零成本 CLI |
-| **Aider** | CLI | 多模型 | 开源+模型费 | 支持 100+ 模型含本地 |
-| **Antigravity** | IDE | 多模型 | **完全免费**（预览期）| 新兴，值得关注 |
-| **Kimi Code** | CLI/插件 | Kimi | 开源 | 国内可自部署 |
-| **v0** | 网页 | GPT-4o | 免费额度 | 前端 UI 生成神器 |
+| 工具 | 形态 | 计费模式 | 适合场景 | 风险点 |
+|------|------|----------|----------|--------|
+| **Cursor** | IDE | 订阅制 | 日常主力开发、多人协作 | 上下文过大时成本上升 |
+| **Windsurf** | IDE | 免费+订阅 | 个人开发、自动任务 | 新功能迭代快，行为可能变化 |
+| **GitHub Copilot** | 插件 | 订阅制 | JetBrains/VS Code 团队 | 深度自动化能力相对保守 |
+| **Claude Code** | CLI | API 计费 | 代码库级改造、批量任务 | 任务放权过大需审查 |
+| **Codex CLI** | CLI | API 计费 | 终端推理、快速迭代 | 成本波动依赖模型与上下文 |
+| **Gemini CLI** | CLI | 免费/配额 | 低预算试用、轻量任务 | 区域可用性与策略变化 |
+| **Aider** | CLI | 开源+模型费 | 多模型接入、本地模型 | 初次配置门槛略高 |
+| **v0** | Web | 免费+订阅 | 前端页面原型与组件生成 | 偏前端场景，不适合后端主流程 |
 
 ---
 
-## 能力维度说明
+## 选型四问（先问再选）
 
-| 能力 | 说明 | 代表工具 |
-|------|------|---------|
-| **代码补全** | 输入时自动续写代码 | Copilot, Cursor, Windsurf |
-| **Chat 对话** | 聊天方式问代码问题 | 所有工具 |
-| **代码库理解** | 理解整个项目，跨文件问答 | Cursor, Claude Code |
-| **自动完成任务（Agentic）** | 给个需求，自动改多个文件 | Cursor Agent, Claude Code, Windsurf Cascade |
-| **终端执行** | 自动运行命令、测试 | Claude Code, Codex CLI, Aider |
-| **本地模型支持** | 用 Ollama 等跑本地模型 | Aider, Cline, Kimi Code |
-| **协作编辑** | 多人同时编辑 | Copilot, Windsurf, Lovable |
+1. **团队主战场在哪？**  
+   - IDE 为主：优先 Cursor / Copilot / Windsurf  
+   - 终端自动化为主：优先 Claude Code / Codex CLI / Aider
 
----
+2. **预算模型是“订阅”还是“按量”？**  
+   - 预算稳定：订阅更好管控  
+   - 需求波动大：API 按量更灵活
 
-## 2026年市场关键数据
+3. **合规要求高吗？**  
+   - 高合规：优先可控的数据策略（团队版、私有化、本地模型）
 
-- **Cursor**：市场领导者，$500M+ ARR，360K 付费用户
-- **Claude Code**：SWE-bench Verified 评测第一（Claude Opus 4.5 达 80.9%），代码能力最强
-- **Gemini 3.1 Pro**：SWE-bench 80.6%，Google 首次进入代码榜前三
-- **Codex CLI**：Terminal-Bench 第二（77.3%），速度最快（240+ tok/s）
-- **Windsurf**：个人版免费，agentic 类别最佳性价比
-- **Copilot**：$10/月，最便宜的有 Git 深度集成的方案
-
-> 💡 专业建议：**同时使用多个工具**效率最高——Cursor 做日常编码，Claude Code 处理复杂代码库级任务。
+4. **是否需要 AI 自动执行整套任务？**  
+   - 需要：选 Agent 能力强的工具（Cursor Agent / Claude Code / Windsurf）
 
 ---
 
-## 选型建议
+## 团队推荐基线组合（可直接落地）
 
-**团队日常开发首选：**
-→ Cursor（综合最强，体验最好）
-
-**预算为零：**
-→ Antigravity（预览期完全免费）或 Gemini CLI（永久免费开源）
-
-**数据隐私要求高：**
-→ Aider / Kimi Code + 本地 Ollama（数据不出网）
-
-**想让 AI 自动完成完整任务：**
-→ Claude Code（代码库级自动化任务首选）
-
-**前端/UI 开发：**
-→ v0.dev（React 组件生成神器）
-
-**已在用 JetBrains：**
-→ GitHub Copilot 或 **Cursor**（2026年3月起支持 JetBrains！）
+- **IDE 主力**：Cursor 或 Copilot（二选一）
+- **CLI 补位**：Claude Code 或 Codex CLI（二选一）
+- **本地兜底**：Aider + Ollama（用于敏感数据或离线开发）
+- **前端提速**：v0（仅用于 UI 草图与组件初稿）
 
 ---
 
-## 工具官网快速入口
+## 为什么删除了很多“排行榜数字”
+
+这次深度维护主动删除了以下高过期风险信息：
+
+- 固定跑分结论（如“某工具长期第一”）
+- 固定商业数据（如 ARR、付费用户规模）
+- 固定速度口径（如 tok/s 单值）
+
+原因：这些信息变化太快，且不同评测口径差异大。课程以“决策方法”优先，避免团队被陈旧数字误导。
+
+---
+
+## 官方入口（按需自查最新信息）
 
 | 工具 | 官网 | 文档 |
 |------|------|------|
@@ -112,12 +96,10 @@ AI 编程工具
 | Windsurf | [codeium.com/windsurf](https://codeium.com/windsurf) | [docs.codeium.com/windsurf](https://docs.codeium.com/windsurf/getting-started) |
 | GitHub Copilot | [github.com/features/copilot](https://github.com/features/copilot) | [docs.github.com/en/copilot](https://docs.github.com/en/copilot) |
 | Claude Code | [anthropic.com/claude-code](https://www.anthropic.com/claude-code) | [docs.anthropic.com](https://docs.anthropic.com/en/docs/claude-code/overview) |
+| Codex CLI | [openai.com](https://openai.com) | [platform.openai.com/docs](https://platform.openai.com/docs) |
 | Gemini CLI | [github.com/google-gemini/gemini-cli](https://github.com/google-gemini/gemini-cli) | — |
 | Aider | [aider.chat](https://aider.chat) | [aider.chat/docs](https://aider.chat/docs/install.html) |
-| Continue.dev | [continue.dev](https://www.continue.dev) | [docs.continue.dev](https://docs.continue.dev) |
 | v0 | [v0.dev](https://v0.dev) | — |
-
-> 数据来源：[LogRocket AI Dev Tool Power Rankings (March 2026)](https://blog.logrocket.com/ai-dev-tool-power-rankings/) · [SWE-bench Leaderboard](https://www.swebench.com)
 
 ---
 
@@ -125,4 +107,4 @@ AI 编程工具
 
 - [M3-02 Cursor 使用指南](./02-cursor.md)
 - [M3-03 其他主流工具](./03-other-tools.md)
-- [M3-04 底层原理](./04-how-it-works.md)
+- [M3-04 AI 编程工具底层原理](./04-how-it-works.md)

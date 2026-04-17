@@ -18,18 +18,19 @@
 ### 计费方式
 每次 API 调用费用 = **输入 Token × 输入单价** + **输出 Token × 输出单价**
 
-### 主流模型价格对比（2026年4月）
+### 主流模型价格获取方式（替代固定价格表）
 
-| 模型 | 输入（/1M tokens） | 输出（/1M tokens） | 适用场景 |
-|------|-----------------|-----------------|---------|
-| **GPT-4o** | $2.5 | $10 | 通用复杂任务 |
-| **GPT-4o mini** | $0.15 | $0.6 | 简单任务首选 |
-| **Claude Sonnet 4** | $3 | $15 | 复杂推理、长文本 |
-| **Claude Haiku 3.5** | $0.8 | $4 | 快速、低成本 |
-| **Gemini 1.5 Flash** | $0.075 | $0.3 | 超低成本 |
-| **DeepSeek V3** | $0.27 | $1.1 | 中文场景性价比高 |
+为避免价格表在几天内过期，本课程不再维护“硬编码价格数字”，改为维护**官方定价入口**：
 
-> 同等效果下，选对模型可以节省 **10-30倍** 成本。
+| 平台 | 官方价格页 |
+|------|-----------|
+| OpenAI | <https://openai.com/api/pricing> |
+| Anthropic | <https://www.anthropic.com/pricing> |
+| Google Gemini | <https://ai.google.dev/pricing> |
+| DeepSeek | <https://platform.deepseek.com/api-docs/pricing> |
+| 阿里云百炼（Qwen） | <https://help.aliyun.com/zh/model-studio/product-overview/billing> |
+
+> 实务建议：每次做成本评估时，用“最新官方价格 + 你自己的真实 Token 用量”即时计算，准确性远高于静态表格。
 
 ---
 

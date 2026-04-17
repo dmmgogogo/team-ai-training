@@ -102,21 +102,20 @@
 
 ---
 
-## API 价格参考（2026年4月，仅供参考，以官方定价页为准）
+## API 价格参考（动态维护）
 
-> 单位：每百万 Token（人民币）
+价格波动非常快（厂商常在月内多次调价），本课程不再维护硬编码价格数字，避免“看起来精确、实际过期”。
 
-| 模型 | 输入价格 | 输出价格 |
-|------|---------|---------|
-| MiniMax M2.5 | ¥0.8 | ¥3.2 |
-| DeepSeek V3.1 | ¥2 | ¥8 |
-| Qwen3-Plus | ¥4 | ¥12 |
-| Claude Haiku 3.5 | ¥6 | ¥30 |
-| GPT-4o mini | ¥11 | ¥44 |
-| Gemini 2.0 Flash | ¥2 | ¥8 |
-| Claude Sonnet 4 | ¥22 | ¥110 |
-| GPT-4o | ¥18 | ¥72 |
-| o3 | ¥110 | ¥440 |
+建议直接使用以下权威入口做最新比价：
+
+| 入口 | 用途 |
+|------|------|
+| [Artificial Analysis 价格页](https://artificialanalysis.ai/models) | 跨厂商横向对比（质量/速度/价格） |
+| [OpenAI Pricing](https://openai.com/api/pricing) | OpenAI 官方定价 |
+| [Anthropic Pricing](https://www.anthropic.com/pricing) | Anthropic 官方定价 |
+| [Google AI Pricing](https://ai.google.dev/gemini-api/docs/pricing) | Gemini API 官方定价 |
+| [DeepSeek Pricing](https://platform.deepseek.com/api-docs/pricing) | DeepSeek 官方定价 |
+| [阿里云百炼定价](https://help.aliyun.com/zh/model-studio/product-overview/billing-overview) | 通义千问/百炼官方定价 |
 
 ---
 

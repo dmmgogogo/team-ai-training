@@ -1,6 +1,6 @@
 # ⭐️ M7-04 · OpenCLI：将网站和工具统一为 CLI
 
-> 最后更新：2026年4月（基于 OpenCLI 官方 README）。  
+> P26年4月（基于 OpenCLI 官方 README）。  
 > OpenCLI 把网站、Electron 应用和本地 CLI 工具统一成一个可被 AI 发现的命令入口，适合做团队自动化与 Agent 工作流。
 
 ---
