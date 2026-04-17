@@ -1,6 +1,6 @@
 # M3-02 · Cursor 使用指南
 
-> 最后更新：2026年3月。Cursor 是当前最主流的 AI IDE 之一（营收/用户数等指标变化很快，建议以官网或权威媒体最新数据为准）。
+> 最后更新：2026年4月。Cursor 是当前最主流的 AI IDE 之一（营收/用户数等指标变化很快，建议以官网或权威媒体最新数据为准）。
 
 ---
 
@@ -145,7 +145,7 @@ You are an expert in Python FastAPI.
 
 - **支持 JetBrains IDE**（2026年3月）：Cursor 加入 JetBrains ACP Registry，IntelliJ IDEA、PyCharm 等可直接使用 Cursor Agent 能力（需 JetBrains 2025.3.2+ + AI Assistant 插件）
 - **Composer 功能**：专有超快编码模型，agent-centric 界面设计
-- **当前版本**：2.6.x（2026年3月）
+- **当前版本**：2.6.x（2026年4月）
 
 ---
 
