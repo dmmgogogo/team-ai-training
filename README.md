@@ -4,7 +4,7 @@
 >
 > 📌 本课程持续更新，建议收藏。欢迎提 Issue 反馈或补充内容。
 >
-🕐 **最近更新：2026-04-07** — M11 新增 Superpowers（138k ⭐ AI 编程 Agent 完整开发工作流）和 gstack（65.9k ⭐ YC CEO 的 AI 软件工厂）；OpenCLI CLI Hub 实战
+> 🕐 最近更新：2026-04-24 — M11 新增《Claude Code 省 Token 指南》图文整理（含封面图与实战要点）；并入 Superpowers 与 gstack 提效资料；完成深度更新与每 3 天自动文档巡检机制
 
 ---
 
@@ -126,6 +126,7 @@
 - [M11-02 ⭐️ OpenCLI：把网站和本地工具统一成 CLI Hub](./11-dev-tools/02-opencli-cli-hub.md)
 - [M11-03 ⭐️ Superpowers：AI 编程 Agent 完整开发工作流](./11-dev-tools/03-superpowers.md)
 - [M11-04 ⭐️ gstack：YC CEO 的 AI 软件工厂](./11-dev-tools/04-gstack.md)
+- [M11-05 ⭐️ Claude Code 省 Token 指南（宝玉）](./11-dev-tools/03-claude-code-token-optimization.md)
 
 ---
 
@@ -153,3 +154,12 @@
 ---
 
 *课程持续更新中。AI 领域发展迅速，建议每季度复习一次。*
+
+---
+
+## 文档自动维护机制
+
+- 已启用自动巡检：`.github/workflows/docs-auto-refresh.yml`
+- 默认每 **3 天**执行一次（UTC 时间）
+- 巡检脚本：`scripts/refresh_docs.py`
+- 维护规则说明：`MAINTENANCE.md`

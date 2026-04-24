@@ -108,6 +108,7 @@
 * [⭐️ OpenCLI：网站与本地工具统一 CLI Hub](11-dev-tools/02-opencli-cli-hub.md)
 * [⭐️ Superpowers：AI 编程 Agent 完整开发工作流](11-dev-tools/03-superpowers.md)
 * [⭐️ gstack：YC CEO 的 AI 软件工厂](11-dev-tools/04-gstack.md)
+* [⭐️ Claude Code 省 Token 指南（宝玉）](11-dev-tools/03-claude-code-token-optimization.md)
 
 ---
 
