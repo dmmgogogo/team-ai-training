@@ -8,6 +8,7 @@
 
 - [M11-01 ⭐️ rtk：Token 节省利器](./01-rtk-token-killer.md)
 - [M11-02 ⭐️ OpenCLI：把网站和本地工具统一成 CLI Hub](./02-opencli-cli-hub.md)
+- [M11-03 ⭐️ Claude Code 省 Token 指南（图文整理）](./03-claude-code-token-optimization.md)
 
 ---
 

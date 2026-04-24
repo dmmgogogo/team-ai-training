@@ -4,7 +4,7 @@
 >
 > 📌 本课程持续更新，建议收藏。欢迎提 Issue 反馈或补充内容。
 >
-> 🕐 最近更新：2026-04-17 — 完成深度更新（删除高波动旧数据、重构模型/工具选型为稳态维护）；新增每 3 天自动文档巡检与更新时间戳同步机制
+> 🕐 最近更新：2026-04-17 — M11 新增《Claude Code 省 Token 指南》图文整理（含封面图与实战要点）；完成深度更新（删除高波动旧数据、重构模型/工具选型为稳态维护）；新增每 3 天自动文档巡检与更新时间戳同步机制
 
 ---
 
@@ -124,6 +124,7 @@
 
 - [M11-01 ⭐️ rtk：Token 节省利器](./11-dev-tools/01-rtk-token-killer.md)
 - [M11-02 ⭐️ OpenCLI：把网站和本地工具统一成 CLI Hub](./11-dev-tools/02-opencli-cli-hub.md)
+- [M11-03 ⭐️ Claude Code 省 Token 指南（宝玉）](./11-dev-tools/03-claude-code-token-optimization.md)
 
 ---
 

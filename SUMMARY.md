@@ -106,6 +106,7 @@
 
 * [⭐️ rtk：Token 节省利器](11-dev-tools/01-rtk-token-killer.md)
 * [⭐️ OpenCLI：网站与本地工具统一 CLI Hub](11-dev-tools/02-opencli-cli-hub.md)
+* [⭐️ Claude Code 省 Token 指南（宝玉）](11-dev-tools/03-claude-code-token-optimization.md)
 
 ---
 
