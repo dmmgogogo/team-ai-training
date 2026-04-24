@@ -164,4 +164,5 @@ gstack 与 Conductor 配合可同时运行 10-15 个并行 Sprint：
 - [Skills 详细说明](https://github.com/garrytan/gstack/blob/main/docs/skills.md)
 - [Builder Ethos](https://github.com/garrytan/gstack/blob/main/ETHOS.md)
 - [上一篇：M11-03 Superpowers](./03-superpowers.md)
+- [下一篇：M11-05 Claude Code 省 Token 指南（图文整理）](./05-claude-code-token-optimization.md)
 - [M11-01 rtk：Token 节省利器](./01-rtk-token-killer.md)

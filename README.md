@@ -126,7 +126,7 @@
 - [M11-02 ⭐️ OpenCLI：把网站和本地工具统一成 CLI Hub](./11-dev-tools/02-opencli-cli-hub.md)
 - [M11-03 ⭐️ Superpowers：AI 编程 Agent 完整开发工作流](./11-dev-tools/03-superpowers.md)
 - [M11-04 ⭐️ gstack：YC CEO 的 AI 软件工厂](./11-dev-tools/04-gstack.md)
-- [M11-05 ⭐️ Claude Code 省 Token 指南（宝玉）](./11-dev-tools/03-claude-code-token-optimization.md)
+- [M11-05 ⭐️ Claude Code 省 Token 指南（宝玉）](./11-dev-tools/05-claude-code-token-optimization.md)
 
 ---
 
