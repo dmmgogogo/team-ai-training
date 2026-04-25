@@ -1,11 +1,11 @@
 # Auto Refresh Report
 
-- Run date: `2026-04-17`
+- Run date: `2026-04-25`
 - Current month marker: `2026年4月`
 
 ## Updated files
 
-- No file updated.
+- `README.md` (replacements: 1)
 
 ## Remaining stale marker candidates
 
