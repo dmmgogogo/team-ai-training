@@ -1,7 +1,7 @@
 # Auto Refresh Report
 
-- Run date: `2026-04-28`
-- Current month marker: `2026年4月`
+- Run date: `2026-05-01`
+- Current month marker: `2026年5月`
 
 ## Updated files
 
