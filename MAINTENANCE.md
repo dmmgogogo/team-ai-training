@@ -8,7 +8,7 @@
 - 执行脚本：`scripts/refresh_docs.py`
 - 脚本职责：
   - 更新首页 `README.md` 的“最近更新”日期
-  - 更新关键文档的“最后更新”日期标签（当前覆盖 M2/M3/references）
+  - 更新关键文档的“最后更新”日期标签（当前覆盖 M2/M3/M12/references 等高时效文档）
   - 生成巡检报告 `reports/auto-refresh-report.md`
   - 若有变更自动提交（机器人账号）
 

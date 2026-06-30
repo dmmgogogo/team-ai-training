@@ -38,6 +38,7 @@
 * [⭐️ RAG：检索增强生成](04-principles/02-rag.md)
 * [⭐️ AI Agent 智能体原理](04-principles/03-agent.md)
 * [MCP：模型上下文协议](04-principles/04-mcp.md)
+* [⭐️ Agent 自审查与自迭代循环](04-principles/05-agent-self-improvement-loop.md)
 
 ---
 
@@ -55,6 +56,7 @@
 * [⭐️ AI 安全与数据隐私](05-practical/09-security-privacy.md)
 * [⭐️ 代码审查与质量控制](05-practical/10-code-review.md)
 * [⭐️ 成本管理与模型选型](05-practical/11-cost-management.md)
+* [⭐️ Agent 自审查与自迭代实战](05-practical/12-agent-self-review-loop.md)
 
 ---
 
@@ -109,6 +111,15 @@
 * [⭐️ Superpowers：AI 编程 Agent 完整开发工作流](11-dev-tools/03-superpowers.md)
 * [⭐️ gstack：YC CEO 的 AI 软件工厂](11-dev-tools/04-gstack.md)
 * [⭐️ Claude Code 省 Token 指南（宝玉）](11-dev-tools/05-claude-code-token-optimization.md)
+
+---
+
+## M12 · AI 发展脉络与版本迭代
+
+* [⭐️ AI 发展阶段总览](12-ai-evolution/01-ai-development-timeline.md)
+* [⭐️ 模型版本迭代追踪法](12-ai-evolution/02-model-version-radar.md)
+* [⭐️ Agent 工作流演进](12-ai-evolution/03-agent-workflow-evolution.md)
+* [⭐️ 新版本评估模板](12-ai-evolution/04-release-review-template.md)
 
 ---
 

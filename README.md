@@ -4,7 +4,7 @@
 >
 > 📌 本课程持续更新，建议收藏。欢迎提 Issue 反馈或补充内容。
 >
-> 🕐 最近更新：2026-06-28 — M11 新增《Claude Code 省 Token 指南》图文整理（含封面图与实战要点）；并入 Superpowers 与 gstack 提效资料；完成深度更新与每 3 天自动文档巡检机制
+> 🕐 最近更新：2026-06-30 — 新增 M12「AI 发展脉络与版本迭代」，把模型、工具、Agent 工作流、新版本评估统一成团队学习主线；新增 Agent 自审查与自迭代专题（M4 原理 + M5 实战）
 
 ---
 
@@ -33,6 +33,7 @@
 | [M9](./09-openclaw/) | **OpenClaw 小🦞** | 自托管 AI 网关：Telegram/Discord 随时用 AI | 所有人 |
 | [M10](./10-cloud-agent/) | **AI Cloud Agent** | 云端 AI 工作流：持续运行、主动推送、自动执行 | 所有人 |
 | [M11](./11-dev-tools/) | **开发提效工具** | Token 节省、上下文压缩等 AI 开发效率工具精选 | 开发同学 |
+| [M12](./12-ai-evolution/) | **AI 发展脉络与版本迭代** | AI 能力演进、模型版本追踪、Agent 工作流升级、新版本评估模板 | 所有人 |
 
 ---
 
@@ -43,10 +44,10 @@
   M1-01 → M1-04 → M2-01 → M2-02 → M5-01
 
 开发路线（技术同学）:
-  M1（全） → M2（全） → M3（全） → M4 → M5 → M6
+  M12 → M1（全） → M2（全） → M3（全） → M4 → M5 → M6
 
 深度路线（想深入研究）:
-  全部模块顺序学习
+  M12 建立主线 → 全部模块顺序学习
 ```
 
 ---
@@ -75,6 +76,7 @@
 - [M4-02 RAG 检索增强生成](./04-principles/02-rag.md)
 - [M4-03 AI Agent 智能体原理](./04-principles/03-agent.md)
 - [M4-04 MCP 模型上下文协议](./04-principles/04-mcp.md)
+- [M4-05 ⭐️ Agent 自审查与自迭代循环](./04-principles/05-agent-self-improvement-loop.md)
 
 ### M5 · 实战与最佳实践
 - [M5-01 ⭐️ Prompt 工程入门](./05-practical/01-prompt-engineering.md)
@@ -89,6 +91,7 @@
 - [M5-09 ⭐️ AI 安全与数据隐私](./05-practical/09-security-privacy.md)
 - [M5-10 ⭐️ 代码审查与质量控制](./05-practical/10-code-review.md)
 - [M5-11 ⭐️ 成本管理与模型选型](./05-practical/11-cost-management.md)
+- [M5-12 ⭐️ Agent 自审查与自迭代实战](./05-practical/12-agent-self-review-loop.md)
 
 ### M6 · AI 项目配置规范
 - [M6-01 ⭐️ .cursorrules 配置指南](./06-ai-project-setup/01-cursorrules.md)
@@ -127,6 +130,13 @@
 - [M11-03 ⭐️ Superpowers：AI 编程 Agent 完整开发工作流](./11-dev-tools/03-superpowers.md)
 - [M11-04 ⭐️ gstack：YC CEO 的 AI 软件工厂](./11-dev-tools/04-gstack.md)
 - [M11-05 ⭐️ Claude Code 省 Token 指南（宝玉）](./11-dev-tools/05-claude-code-token-optimization.md)
+
+### M12 · AI 发展脉络与版本迭代
+
+- [M12-01 ⭐️ AI 发展阶段总览](./12-ai-evolution/01-ai-development-timeline.md)
+- [M12-02 ⭐️ 模型版本迭代追踪法](./12-ai-evolution/02-model-version-radar.md)
+- [M12-03 ⭐️ Agent 工作流演进](./12-ai-evolution/03-agent-workflow-evolution.md)
+- [M12-04 ⭐️ 新版本评估模板](./12-ai-evolution/04-release-review-template.md)
 
 ---
 
