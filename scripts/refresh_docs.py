@@ -33,6 +33,11 @@ TARGET_FILES = [
     ROOT / "03-ai-coding-tools" / "03-other-tools.md",
     ROOT / "05-practical" / "11-cost-management.md",
     ROOT / "07-skills" / "04-opencli.md",
+    ROOT / "12-ai-evolution" / "README.md",
+    ROOT / "12-ai-evolution" / "01-ai-development-timeline.md",
+    ROOT / "12-ai-evolution" / "02-model-version-radar.md",
+    ROOT / "12-ai-evolution" / "03-agent-workflow-evolution.md",
+    ROOT / "12-ai-evolution" / "04-release-review-template.md",
 ]
 
 
@@ -43,7 +48,7 @@ def today() -> dt.date:
 def update_month_markers(text: str, current_month_zh: str) -> tuple[str, int]:
     # Match "最后更新：2026年3月" style.
     pattern = re.compile(r"(最后更新：)\d{4}年\d{1,2}月")
-    new_text, count = pattern.subn(rf"\1{current_month_zh}", text)
+    new_text, count = pattern.subn(lambda m: f"{m.group(1)}{current_month_zh}", text)
     return new_text, count
 
 

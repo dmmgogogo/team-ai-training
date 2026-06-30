@@ -114,6 +114,15 @@
 
 ---
 
+## M12 · AI 发展脉络与版本迭代
+
+* [⭐️ AI 发展阶段总览](12-ai-evolution/01-ai-development-timeline.md)
+* [⭐️ 模型版本迭代追踪法](12-ai-evolution/02-model-version-radar.md)
+* [⭐️ Agent 工作流演进](12-ai-evolution/03-agent-workflow-evolution.md)
+* [⭐️ 新版本评估模板](12-ai-evolution/04-release-review-template.md)
+
+---
+
 ## 📚 参考资源
 
 * [评测榜单 · 官方文档 · 学习资源](references.md)
