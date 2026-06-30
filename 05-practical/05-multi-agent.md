@@ -191,6 +191,8 @@ result = crew.kickoff()
 
 [LangGraph](https://github.com/langchain-ai/langgraph) 用图结构控制复杂 Agent 流程：
 
+> 这里演示的是“生成 → Review → 判断是否重修”的最小多 Agent 图。团队落地时建议结合 [M5-12 Agent 自审查与自迭代实战](./12-agent-self-review-loop.md)，补上最大轮次、验收证据和人工停止条件。
+
 ```python
 from langgraph.graph import StateGraph, END
 from typing import TypedDict
@@ -289,3 +291,4 @@ Cursor 的 Agent 模式本身就支持多步骤任务链：
 - [M5-06 Cursor 正确配置与使用](./06-cursor-setup.md)
 - [M5-07 ChatGPT 正确配置与使用](./07-chatgpt-setup.md)
 - [M5-08 Claude 正确配置与使用](./08-claude-setup.md)
+- [M5-12 Agent 自审查与自迭代实战](./12-agent-self-review-loop.md)

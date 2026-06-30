@@ -4,7 +4,7 @@
 >
 > 📌 本课程持续更新，建议收藏。欢迎提 Issue 反馈或补充内容。
 >
-> 🕐 最近更新：2026-06-28 — M11 新增《Claude Code 省 Token 指南》图文整理（含封面图与实战要点）；并入 Superpowers 与 gstack 提效资料；完成深度更新与每 3 天自动文档巡检机制
+> 🕐 最近更新：2026-06-30 — 新增 Agent 自审查与自迭代专题（M4 原理 + M5 实战），补齐 Goal Loop、Critic、Reflexion、Eval-driven Agent 等最新 Agent 工作流；继续保留每 3 天自动文档巡检机制
 
 ---
 
@@ -75,6 +75,7 @@
 - [M4-02 RAG 检索增强生成](./04-principles/02-rag.md)
 - [M4-03 AI Agent 智能体原理](./04-principles/03-agent.md)
 - [M4-04 MCP 模型上下文协议](./04-principles/04-mcp.md)
+- [M4-05 ⭐️ Agent 自审查与自迭代循环](./04-principles/05-agent-self-improvement-loop.md)
 
 ### M5 · 实战与最佳实践
 - [M5-01 ⭐️ Prompt 工程入门](./05-practical/01-prompt-engineering.md)
@@ -89,6 +90,7 @@
 - [M5-09 ⭐️ AI 安全与数据隐私](./05-practical/09-security-privacy.md)
 - [M5-10 ⭐️ 代码审查与质量控制](./05-practical/10-code-review.md)
 - [M5-11 ⭐️ 成本管理与模型选型](./05-practical/11-cost-management.md)
+- [M5-12 ⭐️ Agent 自审查与自迭代实战](./05-practical/12-agent-self-review-loop.md)
 
 ### M6 · AI 项目配置规范
 - [M6-01 ⭐️ .cursorrules 配置指南](./06-ai-project-setup/01-cursorrules.md)

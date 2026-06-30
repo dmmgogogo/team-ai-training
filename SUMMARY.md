@@ -38,6 +38,7 @@
 * [⭐️ RAG：检索增强生成](04-principles/02-rag.md)
 * [⭐️ AI Agent 智能体原理](04-principles/03-agent.md)
 * [MCP：模型上下文协议](04-principles/04-mcp.md)
+* [⭐️ Agent 自审查与自迭代循环](04-principles/05-agent-self-improvement-loop.md)
 
 ---
 
@@ -55,6 +56,7 @@
 * [⭐️ AI 安全与数据隐私](05-practical/09-security-privacy.md)
 * [⭐️ 代码审查与质量控制](05-practical/10-code-review.md)
 * [⭐️ 成本管理与模型选型](05-practical/11-cost-management.md)
+* [⭐️ Agent 自审查与自迭代实战](05-practical/12-agent-self-review-loop.md)
 
 ---
 

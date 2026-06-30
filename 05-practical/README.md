@@ -6,7 +6,7 @@
 
 ## 模块概述
 
-本模块覆盖日常使用 AI 编程与对话时的核心技能：如何写好 Prompt、如何用 Tools/Skills 扩展能力、多智能体协作、各平台（Cursor、ChatGPT、Claude）的正确配置，以及安全隐私与成本管理。
+本模块覆盖日常使用 AI 编程与对话时的核心技能：如何写好 Prompt、如何用 Tools/Skills 扩展能力、多智能体协作、Agent 自审查与自迭代、各平台（Cursor、ChatGPT、Claude）的正确配置，以及安全隐私与成本管理。
 
 **适合人群**：所有人
 
@@ -28,6 +28,7 @@
 | [M5-09 ⭐️](./09-security-privacy.md) | **AI 安全与数据隐私** | 数据脱敏与合规要点 |
 | [M5-10 ⭐️](./10-code-review.md) | **代码审查与质量控制** | AI 生成代码的审查与规范 |
 | [M5-11 ⭐️](./11-cost-management.md) | **成本管理与模型选型** | Token 成本与模型选择 |
+| [M5-12 ⭐️](./12-agent-self-review-loop.md) | **Agent 自审查与自迭代实战** | 目标 Loop、自动 Review、验证与重试上限 |
 
 ---
 

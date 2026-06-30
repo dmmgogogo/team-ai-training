@@ -96,6 +96,8 @@ def agent_loop(goal):
 
 这就是 Cursor Agent、Claude Code 的基本原理。
 
+> 进阶说明：本章讲的是基础 ReAct 循环。如果要理解“目标 Loop、自审查、自迭代、失败后反思再修正”，继续看 [M4-05 Agent 自审查与自迭代循环](./05-agent-self-improvement-loop.md)。
+
 ---
 
 ## 工具调用（Function Calling / Tool Use）
@@ -211,4 +213,5 @@ Agent 需要"记住"之前做了什么：
 ## 下一步
 
 - [M4-04 MCP 协议](./04-mcp.md) — 工具调用的标准化协议
+- [M4-05 Agent 自审查与自迭代循环](./05-agent-self-improvement-loop.md) — Goal Loop、Critic 与 Reflexion
 - [M5-02 AI 辅助开发工作流](../05-practical/02-workflow.md) — 实战应用
