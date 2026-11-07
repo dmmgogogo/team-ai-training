@@ -204,7 +204,10 @@
 | 2026-10-27 | Kimi K3.1 Pro 发布 | 开源模型在 Agent 编码榜上逼近闭源旗舰 | [China Daily](https://www.chinadaily.com.cn/a/202610/27/WS6adff3c1e4b06d4aa0564e78.html) |
 | 2026-10-28 | Gemini 4 Carbon 公布（Fairwind 计划） | Google 下一代前沿模型进入受限测试 | [Wikipedia](https://en.wikipedia.org/wiki/Gemini_(chatbot)) |
 | 2026-10-29 | Mistral Large 4（1T MoE） | 欧洲旗舰继续走"开源 + 主权 AI"路线 | [Wikipedia](https://en.wikipedia.org/wiki/Mistral_AI) |
-| 2026-11-05 | GPT-6 Cyber 发布 | 网络安全专用模型，需 Trusted Access | [Wikipedia](https://en.wikipedia.org/wiki/GPT-6) |
+| 2026-11-02 | 豆包 Seed-Evolving（字节） | 国内大厂把"深度思考档"做成常驻产品能力 | [火山方舟](https://console.volcengine.com/ark/region:cn-beijing/docs/latest-model) |
+| 2026-11-04 | 腾讯混元 Hy4 正式版；Gemini Omni 1.1 Flash | 770B/49B、1M 上下文、视觉 + Computer Use；视频生成模型继续迭代 | [腾讯云](https://cloud.tencent.cn/developer/article/2776227)｜[OpenRouter](https://openrouter.ai/google/gemini-omni-1.1-flash) |
+| 2026-11-05 | **ERNIE 5.5 Flash Base 开源**；Inkling 2 Small；Nanbeige4.3-33B；Images 2.6 | 开源权重竞争扩大到 280B 级；非中国开源第二极出现；图像模型迭代 | [ERNIE](https://ernie.baidu.com/release/ernie-5-5-flash-base/)｜[AA](https://artificialanalysis.ai/articles/thinking-machines-releases-inkling-2-small-highest-scoring-open-weights-model-outside-of-chinia-upon-weights-release-it) |
+| 2026-11-05（公告 11-06） | **GPT-6 Cyber**；Gemini Omni 1.2 Flash；Qwen4 预热 | 安全专项模型 + 视频模型 + 下一代旗舰预告，发布节奏进入"周更" | [OpenAI](https://openai.com/index/introducing-gpt-6-cyber/)｜[OpenRouter](https://openrouter.ai/google/gemini-omni-1.2-flash)｜[DataLearner](https://www.datalearner.com/ai-models/release-tracker) |
 
 > **截至 2026-11 的观察**：模型迭代已进入"周更/同周对打"节奏；真正的分水岭不再是单个模型分数，而是**Agent 工程能力、上下文与记忆、技能/插件生态、安全与治理**。
 

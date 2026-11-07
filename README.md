@@ -103,6 +103,7 @@
 - **Skills / Plugins 成为能力分发方式**：把团队规范、流程、工具封装成可安装的 Skill；Claude 插件市场、Cursor Skills、AGENTS.md 跨工具约定逐步统一。
 - **MCP 成为工具接入的通用协议**：2026-07-28 规范加入无状态化、`server/discover`、Tasks 扩展等；Registry 仍为 preview，安全与权限成为落地重点。
 - **工程关注点转向 Context Engineering + 评测**：上下文怎么组织、怎么压缩、怎么验证，比"提示词技巧"更决定效果；Agent 的权限、审计与成本成为新的工程课题。
+- **11 月第一周又是一波**：腾讯混元 Hy4（11-04，770B/49B，视觉 + Computer Use）、百度 ERNIE 5.5 Flash Base（11-05，280B/14B，开放权重）、字节豆包 Seed-Evolving（11-02）、Thinking Machines Inkling 2 Small（11-05，计划 Apache 2.0）、OpenAI GPT-6 Cyber（11-05）、Gemini Omni 1.2 Flash（11-05）；阿里 Qwen4 已预热，预计 11–12 月陆续发布。
 - **产业格局也在变**：Cursor 被 SpaceX 以约 600 亿美元收购（2026-06，据公开报道）；Anthropic 递交 S-1 启动 IPO 流程（2026-10）。这些变化会影响工具的中长期选型。
 
 > ⚠️ 以上是 2026-11 的快照。模型与工具变化极快，具体版本、价格、榜单请以各模块内的官方入口为准。

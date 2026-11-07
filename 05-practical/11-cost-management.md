@@ -67,8 +67,10 @@
 | Kimi K3.1 Pro | $2 | $10 | $0.20 | 开源权重 |
 | GLM-5.3（国际站） | $1.4 | $4.4 | $0.26 | 开源权重 |
 | MiMo-V2.6-Pro | ¥3 | ¥6 | ¥0.025 | 全模态 |
+| 混元 Hy4 | ¥6 | ¥18 | ¥0.3 | 2026-11-04 发布；TokenHub |
+| Inkling 2 Small | $0.30 | $1.00 | $0.03 | 2026-11-05；权重待开放 |
 
-> 来源：[OpenAI Pricing](https://developers.openai.com/api/docs/pricing)、[Claude Pricing](https://platform.claude.com/docs/en/about-claude/pricing)、[Gemini Pricing](https://ai.google.dev/gemini-api/docs/pricing)、[DeepSeek 模型 & 价格](https://api-docs.deepseek.com/zh-cn/quick_start/pricing)、[Qwen3.8-Max](https://www.qianwenai.com/models/qwen3.8-max)、[Kimi (heise 2026-10-26)](https://www.heise.de/news/Chinesisches-Open-Weight-Modell-Kimi-K3-1-Pro-rueckt-an-US-Spitzenmodelle-heran-11500459.html)、[GLM-5.3](https://www.alibabacloud.com/help/ja/model-studio/glm-5-3-by-zhipu)、[MiMo](https://mimo.mi.com/docs/en-US/price/pay-as-you-go)（均读取于 2026-11-07）。
+> 来源：[OpenAI Pricing](https://developers.openai.com/api/docs/pricing)、[Claude Pricing](https://platform.claude.com/docs/en/about-claude/pricing)、[Gemini Pricing](https://ai.google.dev/gemini-api/docs/pricing)、[DeepSeek 模型 & 价格](https://api-docs.deepseek.com/zh-cn/quick_start/pricing)、[Qwen3.8-Max](https://www.qianwenai.com/models/qwen3.8-max)、[Kimi (heise 2026-10-26)](https://www.heise.de/news/Chinesisches-Open-Weight-Modell-Kimi-K3-1-Pro-rueckt-an-US-Spitzenmodelle-heran-11500459.html)、[GLM-5.3](https://www.alibabacloud.com/help/ja/model-studio/glm-5-3-by-zhipu)、[MiMo](https://mimo.mi.com/docs/en-US/price/pay-as-you-go)、[混元 Hy4](https://cloud.tencent.cn/developer/article/2776227)、[Inkling 2 Small](https://artificialanalysis.ai/articles/thinking-machines-releases-inkling-2-small-highest-scoring-open-weights-model-outside-of-chinia-upon-weights-release-it)（均读取于 2026-11-07）。
 >
 > ⚠️ 币种不同，比较前按当日汇率换算；表中不含税、不含工具调用附加费。
 

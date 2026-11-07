@@ -228,7 +228,7 @@ KV Cache ≈ 层数 × 2 × hidden × 上下文长度 × 并发数 × 字节数
 ## 八、快速决策总结
 
 ```
-数据不出网        → DeepSeek V4.1-Flash / GLM-5.3 / Step 5 / Kimi K3.1 Pro
+数据不出网        → DeepSeek V4.1-Flash / GLM-5.3 / Step 5 / Kimi K3.1 Pro / 混元 Hy4 / ERNIE 5.5 Flash Base
 编码 Agent        → Claude Opus 5.5；省钱用 Sonnet 5.5 / GPT-6.1 Sol
 超长文档          → Gemini 4 Argon / Claude 5.5 / Kimi K3.1 Pro
 复杂推理          → Claude Fable 5.1 / GPT-6 Astra / Gemini 4 Carbon（限量）
@@ -239,6 +239,8 @@ KV Cache ≈ 层数 × 2 × hidden × 上下文长度 × 并发数 × 字节数
 ```
 
 **最后一句**：先跑 20 条真实任务的自建评测，再谈选型；没有评测的"最强模型"只是别人的结论。
+
+> 📌 **2026-11 第一周补录**：混元 Hy4（11-04）、ERNIE 5.5 Flash Base（11-05，开放权重）、豆包 Seed-Evolving（11-02）、Inkling 2 Small（11-05，权重待发）已加入可选项；Qwen4 仅预热、尚未发布。新模型先确认许可证与可用性，再进评测。
 
 ---
 

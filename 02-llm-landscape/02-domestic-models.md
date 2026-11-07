@@ -24,15 +24,24 @@
 | MiniMax | MiniMax M3 | MiniMax M3.1 Flash | ✅ 开放权重 | [minimax.io](https://www.minimax.io) · [平台](https://platform.minimax.io) |
 | 小米 · MiMo | MiMo-V2.6-Pro | MiMo-V2.6-Flash | ✅ 开放权重 | [mimo.mi.com](https://mimo.mi.com) |
 | 阶跃星辰 · StepFun | Step 5 Preview | —（开源权重） | ✅ 开放权重 | [stepfun.com](https://www.stepfun.com) |
-| 字节 · 豆包 | 豆包大模型 2.0（2026-02） | 豆包轻量档 | ❌ | [volcengine.com/ark](https://console.volcengine.com/ark) |
-| 腾讯 · 混元 | 混元 Hy4（2026-11-04） | — | 计划开源 | [hunyuan.tencent.com](https://hunyuan.tencent.com) |
-| 百度 · 文心 | 以官网为准 | — | 部分 | [yiyan.baidu.com](https://yiyan.baidu.com) |
+| 字节 · 豆包 | 豆包 Seed-Evolving（2026-11-02） | 豆包轻量档 | ❌ | [volcengine.com/ark](https://console.volcengine.com/ark) |
+| 腾讯 · 混元 | 混元 Hy4（2026-11-04，770B/49B） | Hy4 Flash（待发） | 权重近期开源 | [hunyuan.tencent.com](https://hunyuan.tencent.com) |
+| 百度 · 文心 | ERNIE 5.5 Flash Base（2026-11-05，280B/14B） | ERNIE 5.5 Flash（待发） | ✅ 开放权重 | [ernie.baidu.com](https://ernie.baidu.com) |
 
-> 命名统一约定：**DeepSeek V4 系列**（V4 Pro / V4.1-Flash）、**Qwen3.8 Max**、**Kimi K3.1 Pro**、**GLM-5.3**、**MiniMax M3**、**MiMo-V2.6**、**Step 5 Preview**。
+> 命名统一约定：**DeepSeek V4 系列**（V4 Pro / V4.1-Flash）、**Qwen3.8 Max**、**Kimi K3.1 Pro**、**GLM-5.3**、**MiniMax M3**、**MiMo-V2.6**、**Step 5 Preview**、**混元 Hy4**、**ERNIE 5.5 Flash Base**、**豆包 Seed-Evolving**。
 
----
+### 2026-11 第一周增量（11-02 ~ 11-06，发布后补录）
 
-## 各家族"稳定认知"与当前版本
+| 日期 | 模型 | 厂商 | 关键点 | 来源 |
+|------|------|------|--------|------|
+| 2026-11-04 | **混元 Hy4 正式版** | 腾讯 | 770B 总参 / 49B 激活；1M 上下文；首次加入视觉 + Computer Use；¥6/¥18（缓存 ¥0.3）；权重近期开源，Hy4 Flash 待发 | [腾讯云](https://cloud.tencent.cn/developer/article/2776227) |
+| 2026-11-05 | **ERNIE 5.5 Flash Base** | 百度 | 280B 总参 / 14B 激活；1M 上下文；33.5T tokens 训练；开放权重；完整 ERNIE 5.5 Flash 待发 | [ERNIE 发布页](https://ernie.baidu.com/release/ernie-5-5-flash-base/) · [Hugging Face](https://huggingface.co/baidu/ERNIE-5.5-Flash-Base) |
+| 2026-11-02 | **豆包 Seed-Evolving** | 字节 | 深度思考档，火山方舟最新模型 | [火山方舟](https://console.volcengine.com/ark/region:cn-beijing/docs/latest-model) |
+| 2026-11-05 | Nanbeige4.3-33B | 南贝 | 开放权重，AA 智能指数 20，对标 Qwen3.8 27B | [AA 分析](https://artificialanalysis.ai/articles/nanbeige-has-released-nanbeige4-3-33b-scoring-20-on-the-intelligence-index) |
+| 2026-11-06 | Qwen4 系列（预热，未发布） | 阿里 | 官方预热"鲲"，预计 Max/Plus/Flash/27B，11–12 月陆续发布，旗舰或超 3 万亿参数 | [DataLearner 追踪](https://www.datalearner.com/ai-models/release-tracker) |
+
+> 注意：Qwen4 截至 2026-11-07 **尚未发布**，不要当作可用模型选型；发布后以阿里官方为准。
+
 
 ### DeepSeek · V4 系列
 
@@ -216,9 +225,9 @@
 
 | 厂商 | 2026 动态 | 选型提示 |
 |------|-----------|----------|
-| 字节 · 豆包 | 豆包大模型 2.0（2026-02-14），多模态与产品化快 | 消费级/企业协同场景可试点；价格与版本以火山方舟为准 |
-| 腾讯 · 混元 | Hy4（2026-11-04）首次加入视觉理解并计划开源 | 腾讯云生态项目的默认候选之一 |
-| 百度 · 文心 | 企业平台化成熟 | 以官网为准，注意与百度云工具链绑定 |
+| 字节 · 豆包 | 豆包 Seed-Evolving（2026-11-02，深度思考档）；豆包 2.0（2026-02-14） | 消费级/企业协同场景可试点；价格与版本以火山方舟为准 |
+| 腾讯 · 混元 | **Hy4 正式版（2026-11-04）**：770B/49B、1M 上下文、视觉 + Computer Use、¥6/¥18；权重近期开源，Hy4 Flash 待发 | 腾讯云生态项目的默认候选之一；Computer Use 场景值得实测 |
+| 百度 · 文心 | **ERNIE 5.5 Flash Base（2026-11-05 开放权重）**：280B/14B、1M、33.5T tokens；完整版待发 | 需要开源 + 中文知识增强的政企场景 |
 | 商汤 / 讯飞 / 零一万物等 | 垂直行业与政企场景 | 按行业合规与交付能力选，不只看跑分 |
 
 > 来源：[央广网 2026-02-14](https://tech.cnr.cn/ycbd/20260214/t20260214_527526982.shtml)（豆包 2.0）；[中央社 2026-11-04](https://www.cna.com.tw/news/ait/202611040339.aspx)（混元 Hy4）。
@@ -240,6 +249,8 @@
 | Kimi K3.1 Pro | $2 | $10 | $0.20 | USD | [heise](https://www.heise.de/news/Chinesisches-Open-Weight-Modell-Kimi-K3-1-Pro-rueckt-an-US-Spitzenmodelle-heran-11500459.html)（10-26） |
 | MiMo-V2.6-Pro | ¥3 | ¥6 | ¥0.025 | CNY | [MiMo 官方](https://mimo.mi.com/docs/en-US/price/pay-as-you-go)（10-21） |
 | MiMo-V2.6-Flash | ¥1 | ¥2 | ¥0.02 | CNY | 同上 |
+| 混元 Hy4 | ¥6 | ¥18 | ¥0.3 | CNY | [腾讯云 11-04](https://cloud.tencent.cn/developer/article/2776227) |
+| ERNIE 5.5 Flash Base | 开放权重（自部署） | — | — | — | [ERNIE 发布页](https://ernie.baidu.com/release/ernie-5-5-flash-base/) |
 | MiniMax M3 | 以官网为准 | 以官网为准 | — | — | [MiniMax 定价](https://platform.minimax.io/docs/pricing/overview) |
 | Step 5 Preview | 开源自部署 | — | — | — | [官方](https://www.stepfun.com/step-5-preview) |
 
@@ -255,6 +266,7 @@
 | 小米 MiMo | <https://mimo.mi.com/docs/en-US/price/pay-as-you-go> |
 | 火山方舟（豆包） | <https://www.volcengine.com/pricing?product=ark> |
 | 百度千帆 | <https://cloud.baidu.com/product/wenxinworkshop> |
+| 腾讯云 TokenHub | <https://cloud.tencent.com/product/tokenhub> |
 
 ---
 
@@ -320,6 +332,18 @@
 - 2026-10-15 Step 5 Preview 开放权重；2026-09 开放 API
 - 2025 Step 3 / Step-Audio 等
 
+### 腾讯混元
+- 2026-11-04 Hy4 正式版（770B/49B，视觉 + Computer Use，权重近期开源）；Hy4 Flash 待发
+- 2026-08 Hy4 preview；2026-04-24 Hy3 preview；2026-07-07 Hy3 开放权重
+
+### 百度文心
+- 2026-11-05 ERNIE 5.5 Flash Base 开放权重（280B/14B，1M，33.5T tokens）；完整 ERNIE 5.5 Flash 待发
+- 2026-04-29 ERNIE 5.1 开源；2026-01-22 ERNIE 5.0
+
+### 字节豆包
+- 2026-11-02 豆包 Seed-Evolving（深度思考档）
+- 2026-02-14 豆包 2.0
+
 > 以上早期版本日期为公开资料整理；如需引用到正式材料，建议回链各厂商官方发布页复核。
 
 ---
@@ -327,6 +351,7 @@
 ## 参考与核实说明
 
 - 价格与版本读取于 **2026-11-07**，均给出来源链接；MiniMax M3 未获取到稳定公开价格，明确写"以官网为准"。
+- 2026-11-02 ~ 11-06 的新模型（混元 Hy4、ERNIE 5.5 Flash Base、豆包 Seed-Evolving、Nanbeige4.3-33B）为发布后补录；Qwen4 仅为预热，未发布。
 - 国产模型更新极快，**超过 2 个月的"最新版本"判断都可能过期**；每季度复核一次。
 - 本文不收录营销口径的"全面超越/第一"，只保留带日期的官方或第三方数据。
 

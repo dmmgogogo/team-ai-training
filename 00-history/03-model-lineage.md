@@ -167,7 +167,23 @@
 
 ---
 
-## 二、国内家族
+## 二、新进入者（2026）
+
+### Thinking Machines · Inkling
+
+**主线：** Inkling Small → Inkling 2 Small（2026-11-05），走"先闭源、后开放权重"路线。
+**来源：** [Thinking Machines 模型卡](https://thinkingmachines.ai/model-card/inkling-2-small/)｜[AA 分析](https://artificialanalysis.ai/articles/thinking-machines-releases-inkling-2-small-highest-scoring-open-weights-model-outside-of-chinia-upon-weights-release-it)
+
+| 版本 | 发布时间 | 关键变化 | 现状 |
+|------|----------|----------|------|
+| Inkling Small | 2026 上半年 | 第一代，Agent 能力弱 | 旧版 |
+| **Inkling 2 Small** | 2026-11-05 | 594B 总参 / 17B 激活；AA 智能指数 31；计划 Apache 2.0 开放权重 | 活跃（闭源提供，权重待发） |
+
+> 备注：如果按计划开放权重，它将成为"非中国开源权重最高分"的候选，值得关注其许可证与可用性。
+
+---
+
+## 三、国内家族
 
 ### 7. DeepSeek · V 系列 / R 系列
 
@@ -279,7 +295,8 @@
 | ERNIE 3.0 / 4.0 | 2021 / 2023-10 | 中文知识增强 | 弃用 |
 | ERNIE 4.5 / X1 | 2025-03-16 | 多模态 + 推理双线；4.5 开源 | 旧版 |
 | ERNIE 5.0 | 2026-01-22 | 原生多模态 | 旧版 |
-| **ERNIE 5.1** | 2026-04-29 | 开源（Apache 2.0） | 活跃 |
+| ERNIE 5.1 | 2026-04-29 | 开源（Apache 2.0） | 旧版 |
+| **ERNIE 5.5 Flash Base** | 2026-11-05 | 280B/14B、1M、33.5T tokens，开放权重；完整版待发 | 活跃 |
 
 ---
 
@@ -292,7 +309,8 @@
 |------|----------|----------|------|
 | Doubao 1.0 | 2024-05 | 低价 API + 国民级 App | 旧版 |
 | Doubao Seed 1.6 | 2025 | 综合能力升级 | 旧版 |
-| **Doubao Seed 2.0** | 2026-02-14 | 当前主力，产品/API 同步 | 活跃 |
+| Doubao Seed 2.0 | 2026-02-14 | 产品/API 同步 | 旧版 |
+| **Doubao Seed-Evolving** | 2026-11-02 | 深度思考档，火山方舟最新模型 | 活跃 |
 
 > 备注：豆包的核心优势是产品入口与流量，而非单一模型分数；2026 年 7 月起按新规下线拟人化智能体功能。
 
@@ -331,7 +349,24 @@
 
 ---
 
-## 三、横向观察（截至 2026-11）
+### 16. 腾讯 · 混元 Hy
+
+**主线：** 混元 1.0 → Hy3 → Hy4（视觉 + Computer Use）。
+**来源：** [腾讯混元](https://hunyuan.tencent.com/)｜[Hy4 发布（腾讯云）](https://cloud.tencent.cn/developer/article/2776227)
+
+| 版本 | 发布时间 | 关键变化 | 现状 |
+|------|----------|----------|------|
+| 混元 1.0 / 2.0 | 2024 | 腾讯自研基座 | 旧版 |
+| Hy3 preview | 2026-04-24 | 295B-A21B MoE 推理模型 | 旧版 |
+| Hy3（开放权重） | 2026-07-07 | 开放权重，对标 GLM-5.2 / DeepSeek V4 | 旧版 |
+| Hy4 preview | 2026-08 | 长程 Agent 与工具能力预览 | 旧版 |
+| **Hy4 正式版** | 2026-11-04 | 770B/49B、1M 上下文、视觉 + Computer Use、¥6/¥18；权重近期开源 | 活跃 |
+
+> 备注：Hy4 是腾讯首次把"视觉 + 操作电脑"放进正式版，并通过 TokenHub 提供 OpenAI 兼容接口。
+
+---
+
+## 四、横向观察（截至 2026-11）
 
 1. **版本节奏**：头部厂商从"季度发"变成"月发/同周对打"；同代多档（旗舰/主力/轻量）成为标准结构。
 2. **开源与闭源并行**：中国厂商普遍"同代开源权重 + 闭源旗舰"双轨；美国厂商更倾向闭源 + 分级访问。
@@ -356,6 +391,8 @@
 - 豆包：[doubao.com](https://www.doubao.com/)
 - MiMo：[mimo.mi.com](https://mimo.mi.com/)
 - StepFun：[stepfun.com](https://www.stepfun.com/)
+- 腾讯混元：[Hy4 发布说明](https://cloud.tencent.cn/developer/article/2776227)｜[hunyuan.tencent.com](https://hunyuan.tencent.com/)
+- Thinking Machines：[Inkling 2 Small 模型卡](https://thinkingmachines.ai/model-card/inkling-2-small/)
 - Meta：[ai.meta.com](https://ai.meta.com/)
 - xAI：[x.ai/news](https://x.ai/news)
 - Mistral：[mistral.ai/news](https://mistral.ai/news)

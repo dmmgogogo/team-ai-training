@@ -45,10 +45,10 @@
 | **通义千问 Qwen** | [tongyi.aliyun.com](https://tongyi.aliyun.com) | [dashscope.aliyuncs.com](https://help.aliyun.com/zh/model-studio) | [阿里云百炼](https://help.aliyun.com/zh/model-studio) |
 | **MiniMax** | [minimaxi.com](https://www.minimaxi.com) | [platform.minimaxi.com](https://platform.minimaxi.com) | [文档](https://platform.minimaxi.com) |
 | **Kimi / 月之暗面** | [kimi.ai](https://kimi.ai) | [platform.moonshot.cn](https://platform.moonshot.cn) | [文档](https://platform.moonshot.cn/docs) |
-| **文心 / 百度** | [yiyan.baidu.com](https://yiyan.baidu.com) | [千帆平台](https://cloud.baidu.com/product/wenxinworkshop) | [文档](https://cloud.baidu.com/product/wenxinworkshop) |
+| **文心 / 百度** | [yiyan.baidu.com](https://yiyan.baidu.com) | [千帆平台](https://cloud.baidu.com/product/wenxinworkshop) | [ERNIE 发布页](https://ernie.baidu.com/) · [ERNIE 5.5 Flash Base](https://ernie.baidu.com/release/ernie-5-5-flash-base/) · [Hugging Face](https://huggingface.co/baidu/ERNIE-5.5-Flash-Base) |
 | **智谱 GLM** | [chatglm.cn](https://chatglm.cn) | [open.bigmodel.cn](https://open.bigmodel.cn) | [文档](https://open.bigmodel.cn/dev/api) |
 | **豆包 / 字节** | [doubao.com](https://www.doubao.com) | [火山方舟](https://console.volcengine.com/ark) | [文档](https://www.volcengine.com/docs/82379) |
-| **腾讯混元** | [hunyuan.tencent.com](https://hunyuan.tencent.com) | [腾讯云混元](https://cloud.tencent.com/product/hunyuan) | [文档](https://cloud.tencent.com/document/product/1729) |
+| **腾讯混元** | [hunyuan.tencent.com](https://hunyuan.tencent.com) | [腾讯云混元](https://cloud.tencent.com/product/hunyuan) | [文档](https://cloud.tencent.com/document/product/1729) · [Hy4 发布说明](https://cloud.tencent.cn/developer/article/2776227) |
 | **小米 MiMo** | [github.com/XiaomiMiMo](https://github.com/XiaomiMiMo) | — | — |
 | **阶跃 StepFun** | [stepfun.com](https://www.stepfun.com) | [platform.stepfun.com](https://platform.stepfun.com) | [文档](https://platform.stepfun.com/docs) |
 
@@ -112,6 +112,7 @@
 | **Claude Cowork** | [claude.com/product/cowork](https://claude.com/product/cowork) | 桌面/网页/移动端常驻 Agent |
 | **Claude Code 远程** | [code.claude.com/docs](https://code.claude.com/docs) | 云端/远程会话 |
 | **OpenAI Codex Cloud** | [openai.com/codex](https://openai.com/codex) | 云端委派任务 |
+| **Thinking Machines** | [thinkingmachines.ai](https://thinkingmachines.ai/) | Inkling 系列模型 |
 | **GitHub Copilot coding agent** | [docs.github.com/en/copilot](https://docs.github.com/en/copilot) | Issue → PR 自动化 |
 | **Google Jules** | [jules.google](https://jules.google) | Google 的异步编程 Agent |
 | **Devin** | [devin.ai](https://devin.ai) | 自主软件工程 Agent |
@@ -151,6 +152,8 @@
 | 资源 | 地址 | 说明 |
 |------|------|------|
 | **LLM Stats** | [llm-stats.com](https://llm-stats.com) | 模型发布与基准追踪 |
+| **DataLearner 发布追踪** | [datalearner.com/ai-models/release-tracker](https://www.datalearner.com/ai-models/release-tracker) | 未发布模型传闻与官宣预告 |
+| **Daily Diff** | [github.com/dboeter/daily-diff](https://github.com/dboeter/daily-diff) | 每日 AI 模型/实验室更新摘要 |
 | **Arxiv CS.AI** | [arxiv.org/list/cs.AI/recent](https://arxiv.org/list/cs.AI/recent) | 最新论文预印本 |
 | **Hacker News** | [news.ycombinator.com](https://news.ycombinator.com) | 工程圈讨论与发布信息 |
 

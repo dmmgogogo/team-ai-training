@@ -26,6 +26,18 @@
 
 > 命名统一约定：**Claude 5.5 家族**（Opus / Sonnet / Haiku 5.5）、**GPT-6 家族**（Astra 旗舰、Sol/Terra 中档、Luna 轻量）、**Gemini 4**（Carbon 前沿限量、Argon 主力）、**Grok 4.x**、**Muse**（Meta）。
 
+### 2026-11 第一周增量（11-02 ~ 11-06，发布后补录）
+
+| 日期 | 模型 | 厂商 | 关键点 | 来源 |
+|------|------|------|--------|------|
+| 2026-11-05（公告 11-06） | **GPT-6 Cyber** | OpenAI | 网络安全专项：面向防御方与漏洞发现，需 Trusted Access | [OpenAI](https://openai.com/index/introducing-gpt-6-cyber/) |
+| 2026-11-05 | **Gemini Omni 1.2 Flash** | Google | 原生多模态视频生成/编辑，131K 上下文，最长 15 秒；11-04 另有 1.1 Flash | [OpenRouter](https://openrouter.ai/google/gemini-omni-1.2-flash) |
+| 2026-11-05 | **Inkling 2 Small** | Thinking Machines | 594B 总参 / 17B 激活；AA 智能指数 31；先闭源，计划 Apache 2.0 开放权重 | [AA 分析](https://artificialanalysis.ai/articles/thinking-machines-releases-inkling-2-small-highest-scoring-open-weights-model-outside-of-chinia-upon-weights-release-it) |
+| 2026-11-05 | Images 2.6 | OpenAI | 图像生成模型迭代 | [OpenAI](https://openai.com/index/introducing-images-2-6/) |
+| 2026-11-05 | Ling 3.0 Tiny | InclusionAI | MoE，1.3B 激活，262K 上下文 | [OpenRouter](https://openrouter.ai/inclusionai/ling-3.0-tiny) |
+
+> 11 月第一周的发布以"专项/细分模型"为主，通用旗舰并未换代——竞争正在从"通用旗舰"转向"场景化 + 成本"。
+
 ---
 
 ## 国际模型生态总览（稳定层）
@@ -92,6 +104,8 @@
 
 | 版本 | 发布时间 | 关键变化 | 现状（2026-11） |
 |------|----------|----------|-----------------|
+| GPT-6 Cyber | 2026-11-05（官网公告 11-06） | 网络安全专项模型，面向防御与漏洞发现，需 Trusted Access | 受限 |
+| Images 2.6 | 2026-11-05 | 图像生成模型迭代 | 可用 |
 | GPT-6 Sol / Luna（10 月版） | 2026-10-07 | 进入 ChatGPT Chat 标签页，配 Intelligent UI | 当前 ChatGPT 默认档 |
 | GPT-6.1 Sol | 2026-09-29 | DevDay 发布，定位"接近 Astra、价格低很多" | 当前性价比主力 |
 | GPT-6 Astra | 2026-09-03（09-04 起公开；Bedrock 09-08 上市） | 旗舰；1.05M 上下文，ARC-AGI-3 报 98.6%（厂商口径） | 当前旗舰 |
@@ -100,7 +114,7 @@
 | GPT-5.4 | 2026-03-05 | 更便宜的编码/专业工作模型 | 仍可用（$2.50/$15） |
 | GPT-5.5 / 5.5 Instant | 2026 上半年（最晚 5 月已可用） | 面向编码与专业工作 | 仍可用 |
 
-> 来源：[OpenAI 模型目录](https://developers.openai.com/api/docs/models)（读取于 2026-11-07）；GPT-6 Astra 发布：[The New Stack 2026-09-03](https://thenewstack.io/tns-daily/september-3-2026/)；GPT-6.1 Sol 与取消 GPT-6.1 Astra：[Rai News 2026-09-29](https://www.rainews.it/articoli/2026/09/scienza-tecnologia-tech-intelligenza-artificiale-openai-lancia-gpt-6-1-sol-al-posto-di-gpt-6-1-astra-bf34a832-b12d-4752-ac78-dd323c169557.html)；GPT-6 Sol/Luna 进入 ChatGPT：[gihyo 2026-10-08](https://gihyo.jp/article/2026/10/chatgpt-gpt-6-with-intelligent-ui)；GPT-5.6：[VTV 2026-07-08](https://beta1.vtv.vn/openai-se-ra-mat-gpt-56-sau-khi-duoc-my-chap-thuan-100260708220052431.htm)。
+> 来源：[OpenAI 模型目录](https://developers.openai.com/api/docs/models)（读取于 2026-11-07）；GPT-6 Cyber：[OpenAI 2026-11-06](https://openai.com/index/introducing-gpt-6-cyber/)；Images 2.6：[OpenAI 2026-11-05](https://openai.com/index/introducing-images-2-6/)；GPT-6 Astra 发布：[The New Stack 2026-09-03](https://thenewstack.io/tns-daily/september-3-2026/)；GPT-6.1 Sol 与取消 GPT-6.1 Astra：[Rai News 2026-09-29](https://www.rainews.it/articoli/2026/09/scienza-tecnologia-tech-intelligenza-artificiale-openai-lancia-gpt-6-1-sol-al-posto-di-gpt-6-1-astra-bf34a832-b12d-4752-ac78-dd323c169557.html)；GPT-6 Sol/Luna 进入 ChatGPT：[gihyo 2026-10-08](https://gihyo.jp/article/2026/10/chatgpt-gpt-6-with-intelligent-ui)；GPT-5.6：[VTV 2026-07-08](https://beta1.vtv.vn/openai-se-ra-mat-gpt-56-sau-khi-duoc-my-chap-thuan-100260708220052431.htm)。
 
 **当前规格与价格（每百万 token，USD，标准档）**
 
@@ -127,6 +141,7 @@
 
 | 版本 | 发布时间 | 关键变化 | 现状（2026-11） |
 |------|----------|----------|-----------------|
+| Gemini Omni 1.2 Flash | 2026-11-05 | 原生多模态视频生成/编辑，131K 上下文，最长 15 秒；11-04 另有 1.1 Flash | 新，OpenRouter 等渠道可用 |
 | Gemini 4 Carbon | 2026-10-28 | 面向网络安全防御与长程任务；AA 智能指数报 59（发布口径） | 仅限受信防御方/合作伙伴，尚未全面开放 |
 | Gemini 4 Argon | 2026-09-30 发布、2026-10-13 全面可用 | 1,048,576 统一上下文；多模态输入；Vals Index 报第一 | 当前主力可用前沿模型 |
 | Gemini 3.8 Flash | 2026-09-02 | Flash 档迭代，另有政府限定的网络安全版本 | 仍可用 |
@@ -189,6 +204,13 @@
 ### Mistral AI（简述）
 
 欧洲厂商，合规语境（GDPR/数据驻留）友好，开源系与 Codestral 代码模型是主要差异点。2026 年前沿能力与三强有差距，更适合作为**欧洲区域合规备选**或**低成本自托管**。入口：<https://mistral.ai> / <https://docs.mistral.ai>（具体版本与价格以官网为准）。
+
+---
+
+### 其他值得关注（2026-11 新进入者）
+
+- **Thinking Machines · Inkling 2 Small**（2026-11-05）：594B 总参 / 17B 激活；先经 Tinker 平台闭源提供，计划以 Apache 2.0 开放权重；AA 智能指数 31（与 Gemini 3.8 Flash 同分），价格 $0.30 / $1.00（输入/输出，每百万 token）。值得关注"非中国开源权重第二极"的团队。
+- **InclusionAI · Ling 3.0 Tiny**（2026-11-05）：1.3B 激活 MoE、262K 上下文，轻量 Agent 备选。
 
 ---
 
@@ -269,6 +291,7 @@
 - 2024-06-20：Claude 3.5 Sonnet；2024-03-04：Claude 3 家族
 
 ### OpenAI GPT
+- 2026-11-05：GPT-6 Cyber（网安专项，需 Trusted Access）；Images 2.6
 - 2026-10-07：GPT-6 Sol / Luna（10 月版）进入 ChatGPT
 - 2026-09-29：GPT-6.1 Sol 发布；同日确认取消 GPT-6.1 Astra（"频繁忽略指令"）
 - 2026-09-03：GPT-6 Astra 发布（09-04 起公开）
@@ -281,6 +304,7 @@
 - 停用节奏：o1/o3/GPT-4 系于 2026-10-23 关停 ~~弃用~~；GPT-4o/4.1 计划 2027-01-14 关停；GPT-5 系计划 2026-12-11 关停
 
 ### Google Gemini
+- 2026-11-05：Gemini Omni 1.2 Flash（视频生成/编辑）；11-04：Omni 1.1 Flash
 - 2026-10-28：Gemini 4 Carbon 发布（限量，防御方优先）
 - 2026-10-13：Gemini 4 Argon 全面可用；2026-09-30 首次发布（受信测试者）
 - 2026-09-02：Gemini 3.8 Flash
@@ -304,6 +328,7 @@
 - 本页所有价格读取于 **2026-11-07**；发布说明/榜单页面标注了各自日期。
 - 厂商自报的跑分（如 Astra 的 ARC-AGI-3 98.6%、Carbon 的 AA 59）已标注"厂商口径"，未经第三方复现。
 - 查不到官方确认的条目（如 Carbon 的完整规格、部分 Flash 版本日期）留白或写"以官网为准"，不做推测。
+- 2026-11-02 ~ 11-06 的新模型（混元 Hy4、ERNIE 5.5 Flash Base、豆包 Seed-Evolving、Inkling 2 Small、GPT-6 Cyber、Gemini Omni 等）为发布后补录，来源见上文与 [M2-02](./02-domestic-models.md)。
 
 ---
 
