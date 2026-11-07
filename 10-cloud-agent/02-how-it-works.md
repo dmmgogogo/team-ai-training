@@ -1,224 +1,232 @@
 # M10-02 · Cloud Agent 工作原理
 
-> 沙箱、执行循环、状态管理——它是怎么做到自主干活的
+> 📅 内容基准：2026-11 ｜ ⏱️ 时效性：高 ｜ 🔁 下次复核：2027-02
+
+> 沙箱、执行循环、凭据隔离、状态管理——它是怎么做到"自主干活"的。**2026 年新增的重点是：环境即配置、凭据不进沙箱、网络出口可管控。**
+
+---
+
+## 一句话结论
+
+Cloud Agent 的工程本质没有变：**隔离环境 + ReAct 循环 + Git 交付**。但 2026 年的产品把它做成了"**环境（environment）**"这个一等公民：仓库、依赖、网络、密钥、启动脚本都固化成一个可复用配置，任务只是在这个环境里跑的一次会话。
 
 ---
 
 ## 整体架构
 
 ```
-用户
-  │  发出任务指令
+用户（Web / 手机 / 桌面 / CLI / IM）
+  │  任务指令 + 环境选择
   ▼
-任务调度层（Orchestrator）
-  │  拆解任务 / 分配资源
+调度层（Orchestrator）
+  │  分配沙箱 / 选择镜像 / 注入环境配置
   ▼
-云端沙箱环境（Sandbox VM / Container）
-  ├─ 代码仓库（clone 你的 repo）
-  ├─ 完整 Shell 环境
-  ├─ 依赖安装空间
-  └─ 网络访问（受限）
+隔离执行环境（云 VM / 容器 / 本地隔离 VM）
+  ├─ 仓库（clone 或上传 bundle）
+  ├─ 依赖与工具（setup script）
+  ├─ Shell / 浏览器 / 测试运行器
+  ├─ 网络出口（allowlist / 可关闭）
+  └─ 凭据代理（token 不进沙箱）
         │
         ▼
-   AI Agent 执行循环
-   THINK → ACT → OBSERVE → THINK → ...
+  Agent 执行循环：THINK → ACT → OBSERVE → …
         │
         ▼
-    结果输出
-    （PR / 文件变更 / 报告）
+  验证（测试 / lint / 构建）
         │
         ▼
-     通知用户
+  交付：分支 / PR / 文件 / 报告
+        │
+        ▼
+  通知 + 人工 review
 ```
 
 ---
 
-## 第一步：沙箱环境的建立
+## 第一步：构建环境（environment）
 
-Cloud Agent 启动时，第一件事是**构建一个和你项目完全一致的干净环境**：
+2026-11 的主流产品都要求你先定义环境，而不是"每次从零 clone"：
+
+| 产品 | 环境定义 |
+|------|----------|
+| Claude Code cloud | Cloud environment：网络访问级别、环境变量、setup script |
+| Codex Cloud | Environment：仓库、依赖、网络与密钥、可发布的已保存状态 |
+| Copilot in the cloud | Cloud sandbox / GitHub Actions / Remote 三种环境 |
+| Cowork | 桌面端本地隔离 VM（按会话） |
+
+**为什么要固化环境？**
+
+- 依赖安装是长任务里最容易被浪费的步骤；缓存/快照能显著缩短启动时间。
+- 网络与密钥策略集中管理，避免每个任务各写一套。
+- 任务失败可以归因到"环境问题"还是"代码问题"。
+
+**典型 setup：**
 
 ```bash
-# 伪代码：Cloud Agent 启动流程
-git clone https://github.com/your-org/your-repo /workspace
-cd /workspace
-git checkout -b agent/task-20240315-fix-auth  # 新建独立分支
-
-# 安装依赖（真实执行）
-npm install
-# 或
-pip install -r requirements.txt
-
-# 环境就绪，开始执行任务
+git clone <repo> /workspace && cd /workspace
+git checkout -b agent/<task-id>
+npm ci            # 或 pip install -r requirements.txt
+# 可选：缓存、代码生成、数据库迁移
 ```
-
-**为什么要隔离？**
-- 避免破坏你的本地环境
-- 多个任务可以并行跑互不影响
-- 失败了直接丢弃这个环境，没有副作用
 
 ---
 
 ## 第二步：任务规划
 
-Agent 拿到任务后，不会直接开始改代码，而是先**理解全局**：
+Agent 拿到任务后先理解全局，再动手：
 
 ```
-任务："把所有 API 接口的错误处理统一改成用 ErrorHandler 类"
+任务："把所有 API 错误处理统一改成 ErrorHandler"
 
-Agent 的规划过程：
-1. 搜索代码库：find . -name "*.py" | xargs grep "except"
-2. 列出所有涉及文件（找到 23 个文件）
-3. 分析现有的 ErrorHandler 类（在 utils/errors.py）
-4. 制定修改顺序（从底层依赖到上层调用）
-5. 开始逐文件修改
+1. 搜索代码库，定位所有 try/except / console.error
+2. 列出涉及文件与调用链
+3. 读取现有 ErrorHandler 实现
+4. 制定修改顺序（从底层到上层）
+5. 逐文件修改并验证
 ```
 
-这个规划过程本身也由 LLM 驱动，不是硬编码的。
+这个规划由 LLM 驱动，不是硬编码。好的 Cloud Agent 会**先给计划、再执行**；你也可以要求它"先输出计划，等我确认"。
 
 ---
 
 ## 第三步：执行循环（核心）
 
-和本地 Agent 相同的 ReAct 循环，但有真实的 Shell 执行权：
-
 ```
-THINK:   "我需要先了解 auth.py 的结构"
+THINK:   "先看 auth.py 的结构"
 ACT:     cat src/auth.py
-OBSERVE: [读取到文件内容]
+OBSERVE: [文件内容]
 
-THINK:   "第 47 行的 try/except 需要改，先修改"
-ACT:     edit_file(src/auth.py, line=47, ...)
-OBSERVE: "文件已修改"
+THINK:   "第 47 行的 try/except 需要替换"
+ACT:     edit_file(...)
+OBSERVE: "已修改"
 
-THINK:   "改完后要验证语法正确"
+THINK:   "验证语法"
 ACT:     python -m py_compile src/auth.py
-OBSERVE: "✅ 无语法错误"
+OBSERVE: "无语法错误"
 
-THINK:   "跑一下相关单元测试"
+THINK:   "跑相关测试"
 ACT:     pytest tests/test_auth.py -v
-OBSERVE: "3 passed, 0 failed"
-
-THINK:   "这个文件改完了，继续下一个..."
+OBSERVE: "3 passed"
 ```
 
-**关键：它能真正执行命令并看到结果**，而不只是建议你去执行。
+与本地 Agent 的区别只有两点：**执行在隔离环境里**、**你不需要实时盯着**。
 
 ---
 
 ## 第四步：验证与自我修复
 
-Cloud Agent 的重要能力：**跑测试 → 发现错误 → 自动修复**
-
 ```
-改完代码
-    ↓
-跑测试：pytest tests/
-    ↓
-发现 2 个测试失败
-    ↓
-分析失败原因（读 traceback）
-    ↓
-修改代码
-    ↓
-再跑测试
-    ↓
-全部通过 ✅
-    ↓
-提交结果
+改完 → 跑测试 → 失败 → 读 traceback → 修 → 再跑 → 通过 → 提交
 ```
 
-这个循环可以自动重复多次，直到测试通过或达到重试上限。
+这是 Cloud Agent 最有价值的部分，也是风险所在：
+
+- ✅ 能自己发现并修复明显错误；
+- ⚠️ 可能"改测试让它通过"、跳过失败用例、或降低断言强度。
+
+**对策：** review 时专门看测试文件是否被修改；CI 在干净环境重跑；关键仓库开分支保护。
 
 ---
 
 ## 第五步：结果交付
 
-任务完成后的标准流程：
-
 ```bash
-# Agent 自动完成的操作
 git add -A
-git commit -m "fix: 统一 API 错误处理为 ErrorHandler 类
-
-- 修改 23 个文件
-- 保持原有 HTTP 状态码行为不变  
-- 所有相关测试通过"
-
-git push origin agent/task-20240315-fix-auth
-
-# 创建 Pull Request
-# → 通知你来 review
+git commit -m "refactor: 统一 API 错误处理"
+git push origin agent/<task-id>
+# 创建 PR / 或在 Web 界面点"创建 PR"
 ```
 
-**你收到的是：** 一个完整的 PR，包含所有变更，随时可以 review 并合并。
+你收到的是：**分支 + diff + PR**。部分产品（Copilot、Claude Code、Codex）还能继续监听 PR：
+
+- CI 失败 → 自动修；
+- reviewer 评论 → 自动响应（有歧义时会先问你）；
+- 合并冲突 → 目前多数产品不能自动处理，需要手动 rebase。
 
 ---
 
-## 状态管理：Agent 如何"记住"做了什么
+## 状态管理：长任务怎么"记住"
 
-长任务的难点是**状态持久化**：
+| 层 | 作用 | 限制 |
+|----|------|------|
+| 上下文窗口 | 当前任务的工作记忆 | 会压缩/截断 |
+| 环境状态 | 依赖、缓存、文件系统 | 环境过期/回收后丢失 |
+| 会话历史 | 对话与工具调用记录 | 跨设备可继续（部分产品） |
+| Git | 最可靠的状态记录 | 需要 agent 主动 commit |
 
-```
-短期记忆（Context Window）
-  → 当前正在处理的文件和上下文
-  → 有 Token 限制，超出则总结压缩
-
-工作状态（持久化）
-  → 已完成的文件列表写入 .agent-state.json
-  → 遇到中断可以从断点继续
-
-Git 本身就是最好的状态记录
-  → 每完成一个子任务就 commit
-  → 出错可以 git revert 回滚
-```
+**实践建议：** 让 agent 每完成一个子任务就 commit；长任务拆成多个小任务；把计划写进仓库文件（如 `docs/plan.md`），这样 teleport/重启后还能接着干。
 
 ---
 
-## 安全边界
+## 安全边界（2026 年重点）
 
-Cloud Agent 不是无限制的，有明确的访问控制：
+| 边界 | 做法 |
+|------|------|
+| **隔离** | 每会话独立 VM/容器；本地 Agent 用隔离 VM 或沙箱 |
+| **凭据** | Git 凭据与签名密钥留在沙箱外，由代理按请求注入；网络密钥同理 |
+| **网络** | 默认 allowlist，可关闭；高风险环境限制出口域名 |
+| **权限** | 会话级权限模式；写操作需审批；组织策略可禁用云会话 |
+| **审计** | 会话日志、工具调用记录、用量报表 |
+| **人工闸门** | 合并前必须 review；生产部署不交给 Agent |
 
-| 允许 | 不允许（默认） |
-|------|--------------|
-| 读写仓库代码 | 访问生产数据库 |
-| 安装开发依赖 | 访问外部 API（需授权） |
-| 跑测试和 lint | 部署到生产环境 |
-| 创建 PR/分支 | 直接合并代码 |
-| 搜索代码库 | 访问其他仓库 |
-
-**设计原则：** Agent 做，人来 review，最终决策权始终在你手上。
+> 一个容易忽略的点：即使"关闭网络"，Agent 仍可能与模型 API 通信，**数据仍可能离开沙箱**。合规判断要看完整链路，而不是只看"有没有外网"。
 
 ---
 
-## 和本地 Agent 模式的技术对比
+## 两种执行模式的技术对比
 
-| 技术维度 | 本地 Claude Code / Cursor | Cloud Agent |
-|----------|--------------------------|-------------|
-| 执行环境 | 你的本地 shell | 云端隔离容器 |
-| 任务时长 | 取决于上下文窗口 | 可以跑数小时 |
-| 并发 | 单任务 | 多任务并行 |
-| 断点续跑 | ❌ | ✅ |
-| 费用 | API Token 费用 | 平台费 + Token |
-| 数据隐私 | 代码留在本地 | 上传到云端 |
+| 技术维度 | 托管云沙箱 | 本地执行 + 远程控制 |
+|----------|-----------|---------------------|
+| 执行位置 | 厂商云 VM | 你的机器 |
+| 代码位置 | 上传/克隆到云端 | 留在本地 |
+| 机器要求 | 无（关电脑也能跑） | 机器要开机、进程要常驻 |
+| 断点续跑 | 会话可恢复（环境过期会回收） | 依赖本地进程 |
+| 并发 | 多会话并行 | 受本机资源限制 |
+| 数据隐私 | 取决于厂商与配置 | 最高 |
+| 计费 | 套餐用量 / 席位 / token | 主要是我方算力 + API |
+
+---
+
+## 并行：从"一个 Agent"到"一组 Agent"
+
+2026 年的产品普遍支持并行，但机制不同：
+
+| 机制 | 代表 | 隔离方式 |
+|------|------|----------|
+| 多会话并行 | Claude Code cloud、Codex Cloud | 每会话独立环境 |
+| Agent view（研究预览） | Claude Code | 后台会话 + 可选 worktree |
+| Agent Teams（实验，默认关闭） | Claude Code | 共享任务列表 + 互相消息，**不自动隔离 worktree**，需按文件划分 |
+| 动态工作流 | Claude Code | 脚本编排大量 subagent，交叉验证 |
+| Projects（公测） | Claude Code | 一个项目下多条线程，云端或 Remote Control |
+
+**教训：** 并行不是免费的——token 成倍、冲突概率上升、review 成本上升。先串行跑通，再并行。
 
 ---
 
 ## 小结
 
-Cloud Agent 的本质是：
-
 ```
-= 云端隔离环境
-+ 真实 Shell 执行权
-+ LLM ReAct 循环
-+ 异步任务调度
-+ Git 作为结果交付载体
+Cloud Agent
+= 可复用环境（仓库 + 依赖 + 网络 + 密钥）
++ 隔离执行 + ReAct 循环
++ 验证与自我修复
++ Git 交付（PR）
++ 人工 review 闸门
 ```
 
-不神秘，但组合在一起威力很大。
+不神秘，但每一层都需要工程化。**"能跑"和"能放心合并"之间，差的是环境、权限与 review 流程。**
+
+---
+
+## 历史沿革
+
+- **2026-11**：环境（environment）成为标准抽象；凭据代理、网络密钥、自托管环境成为企业选项；并行机制从"多会话"扩展到 agent teams / workflows / projects。
+- **2026-07-28**：MCP 规范无状态化，云端 Agent 接 MCP 的方式随之调整（不再依赖会话握手）。
+- **2026-03（课程初版）**：当时的架构描述以"Cursor Background Agent / Devin"为样本，强调"clone repo → ReAct → PR"，没有环境配置、凭据代理、网络 allowlist 这些概念。旧描述保留在 [M10-01 历史沿革](./01-what-is-cloud-agent.md#历史沿革)，作为"Cloud Agent 1.0"的认知快照。
 
 ---
 
 ## 下一步
 
 - [M10-03 如何使用 Cloud Agent](./03-using-cloud-agent.md) — 实战上手指南
+- [M10-04 自建 Cloud Agent 工作流](./04-build-your-own.md) — 自己搭一套

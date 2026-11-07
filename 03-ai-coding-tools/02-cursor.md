@@ -1,16 +1,32 @@
 # M3-02 · Cursor 使用指南
 
-> P26年4月。Cursor 是当前最主流的 AI IDE 之一（营收/用户数等指标变化很快，建议以官网或权威媒体最新数据为准）。
+> 📅 内容基准：2026-11 ｜ ⏱️ 时效性：高 ｜ 🔁 下次复核：2027-02
+>
+> 当前版本：**Cursor 3**（2026-04-02 发布，以 Agent 为中心的新界面）。老版本 Cursor 2 / IDE 形态保留在文末「历史沿革」。
 
 ---
 
-## 什么是 Cursor？
+## 一句话结论
 
-Cursor 是一个基于 VS Code 深度改造的 **AI 原生代码编辑器**。它不只是加了个 AI 插件，而是从底层重新设计了人机协作的方式。
+Cursor 不再是「加了 AI 的 VS Code」，而是**一个以 Agent 为中心的软件工作台**：本地 Agent、云端 Agent、Mobile、Slack、GitHub、Linear 触发的会话都在同一个侧边栏里；界面随时可以切回 IDE 看文件、跑 LSP。2026-06 起 Cursor 母公司 Anysphere 被 SpaceX 收购，默认模型家族转向 Grok，但第三方模型仍可接入。
 
-- 下载地址：[cursor.com](https://www.cursor.com)
-- 基于 VS Code，所有 VS Code 插件和快捷键都能用
-- 底层可对接多家主流模型（具体可用模型与版本以 Cursor 客户端/官方说明为准）
+- 下载地址：[cursor.com/download](https://cursor.com/download)
+- 官方文档：[cursor.com/docs](https://cursor.com/docs)
+- 新界面入口：`Cmd+Shift+P` → `Agents Window`（旧 IDE 界面仍可切回）
+
+---
+
+## Cursor 3 的五个关键变化
+
+| 变化 | 说明 |
+|------|------|
+| **Agents Window** | 新界面以 Agent 会话为中心，所有本地/云端 Agent 统一出现在侧边栏 |
+| **多仓库（multi-repo）** | 新界面天然支持跨仓库工作，不再局限单项目窗口 |
+| **并行 Agent** | 可同时跑多个 Agent，包括从 Mobile / Web / Slack / GitHub / Linear 触发的会话 |
+| **本地 ⇄ 云端交接** | 会话可在本地与云端之间迁移：本机调试、离线长任务都覆盖 |
+| **Agent SDK + CLI** | Agent 可以「作为代码」定义、评测、部署（2026-10 起 GA） |
+
+> 云端 Agent 会产出 demo 和截图供你验收；合并前仍建议人工 review（见 [M5-10 代码审查](../05-practical/10-code-review.md)）。
 
 ---
 
@@ -23,7 +39,7 @@ Cursor 是一个基于 VS Code 深度改造的 **AI 原生代码编辑器**。�
 按 Tab 键接受建议，Esc 忽略
 ```
 
-不只补全一行，而是能补全整个函数、整块逻辑。
+不只补全一行，而是能补全整个函数、整块逻辑。补全由 Cursor 自有小模型（`cursor-small` 一类）负责，速度快、成本低。
 
 **示例：**
 ```python
@@ -48,13 +64,13 @@ def calculate_discount(price, member_level):
 → Cursor 直接在原地修改，可以接受或拒绝
 ```
 
-适合：快速重构、修改逻辑、格式转换
+适合：快速重构、修改逻辑、格式转换。
 
 ---
 
 ### 3. Cmd+L · Chat 模式（对话）
 
-按 `Cmd+L` 打开右侧 Chat 面板：
+按 `Cmd+L` 打开 Chat 面板：
 
 - 问代码问题："这个 bug 是什么原因？"
 - 让它生成代码："写一个 JWT 验证中间件"
@@ -70,13 +86,15 @@ def calculate_discount(price, member_level):
 
 ---
 
-### 4. Agent 模式（自动任务）
+### 4. Agent / Agents Window（自动任务）
 
 Cursor 最强大的模式。你描述需求，它自动：
+
 - 读取相关文件
 - 修改多个文件
 - 运行命令和测试
 - 修复出现的错误
+- 需要时在云端继续跑
 
 ```
 示例 Prompt：
@@ -85,7 +103,43 @@ Cursor 最强大的模式。你描述需求，它自动：
  并添加输入验证和错误处理"
 ```
 
-Cursor 会自动操作多个文件，一次性完成任务。
+Cursor 3 里 Agent 会话不再局限于当前窗口：本地会话可以「交给云端」继续跑，云端会话也可以「拉回本地」调试。
+
+---
+
+### 5. Cursor CLI（终端）
+
+```bash
+# 安装后即可在任意项目目录启动 Agent
+agent
+```
+
+常用：
+
+- 在终端里跑 Agent（适合远程服务器 / tmux）
+- 接 GitHub Actions、脚本、自动化
+- 通过 `--model` 选择模型（Grok 4.7 / Opus 5.5 / GPT-5.6 Sol / Fable 5.1 / Gemini 3.1 Pro / Composer 2.5 等，以 CLI `/model` 列表为准）
+
+---
+
+## 模型选择（2026-11）
+
+Cursor 3 可切换多家族模型。**注意套餐限制**：Plus（$8）只能用 Grok 模型；Premium 及以上才能用第三方模型，且第三方模型按 API 价另计。
+
+| 模型 | 适合场景 | 备注 |
+|------|---------|------|
+| **Grok 4.7**（默认家族之一） | 长程编码、Agent 任务 | 256k 标准上下文 / 500k 长上下文（[来源](https://cursor.com/grok)，2026-09-21） |
+| **Composer 2.5** | 日常迭代、快速修改 | Cursor 自有模型，用量限制较宽松 |
+| **Claude Opus 5.5 / Sonnet 5.5** | 复杂重构、代码审查 | 第三方模型，按 API 价 |
+| **GPT-6 系列 / Fable 5.1 / Gemini 3.1 Pro** | 按任务选择 | 以客户端列表为准 |
+
+**配置建议：**
+- Tab 补全 → 默认小模型（速度优先，不占对话额度）
+- Chat 对话 → Sonnet 5.5（质量/成本平衡）
+- Agent 任务 → Grok 4.7 或 Opus 5.5（能力优先）
+- 简单批量任务 → Haiku 5.5 / Composer
+
+> 模型家族与可用性变化很快；`/model` 里没有的模型就是当前套餐不可用，**以客户端为准**。
 
 ---
 
@@ -103,15 +157,24 @@ Cursor 会自动操作多个文件，一次性完成任务。
 | `@git` | 引用 Git 历史 |
 | `#终端输出` | 引用终端错误信息 |
 
-### Cursor Rules 文件
+### Cursor Rules（规则体系）
 
-推荐在 `.cursor/rules/` 目录下创建 `.mdc` 文件，给 Cursor 写项目规则（旧版 `.cursorrules` 仍兼容但不再推荐）：
+Cursor 现在支持四类规则（[官方文档](https://cursor.com/docs/rules)，2026-11）：
+
+| 类型 | 位置 | 作用 |
+|------|------|------|
+| **Project Rules** | `.cursor/rules/*.mdc` | 随仓库版本控制，按路径/关键词/手动触发 |
+| **User Rules** | 客户端设置 | 对当前用户全局生效 |
+| **Team Rules** | 团队后台 | Team / Enterprise 计划可用，团队统一 |
+| **AGENTS.md** | 仓库根目录 | 纯 Markdown 的轻量替代方案 |
 
 ```
 .cursor/rules/project.mdc 示例：
 
 ---
-alwaysApply: true
+description: Python FastAPI 后端规范
+globs: ["**/*.py"]
+alwaysApply: false
 ---
 
 You are an expert in Python FastAPI.
@@ -122,7 +185,7 @@ You are an expert in Python FastAPI.
 - Write tests for all new functions
 ```
 
-这样 Cursor 在这个项目里就会按你的规范写代码。详见 [M6-01 Cursor Rules 配置指南](../06-ai-project-setup/01-cursorrules.md)。
+> `.cursorrules` 是旧写法，已不推荐；`.md` 文件放在 `.cursor/rules/` 下不会被识别（缺 frontmatter），要写纯 Markdown 就用 `AGENTS.md`。详见 [M6-01 Cursor Rules 配置指南](../06-ai-project-setup/01-cursorrules.md)。
 
 ---
 
@@ -133,31 +196,41 @@ You are an expert in Python FastAPI.
 | `Tab` | 接受代码补全 |
 | `Cmd+K` | 内联编辑 |
 | `Cmd+L` | 打开 Chat |
-| `Cmd+I` | 打开 Agent 模式 |
+| `Cmd+I` | 打开 Agent |
 | `Cmd+Shift+L` | 把选中代码发送到 Chat |
-| `Esc` | 拒绝建议 |
+| `Cmd+Shift+P` → `Agents Window` | 打开 Cursor 3 新界面 |
+| `Esc` | 拒绝建议 / 暂停 Agent |
 
 （Windows 把 Cmd 换成 Ctrl）
 
 ---
 
-## 近期能力方向（动态变化）
+## 定价（2026-11 官网口径）
 
-- **JetBrains 生态支持**：可在部分 JetBrains IDE 中使用 Cursor Agent 能力（以 Cursor/JetBrains 官方文档为准）
-- **Composer 工作流**：强调 agent-centric 交互，适合任务分解与多文件修改
-- **模型与功能快速迭代**：具体版本号和可用特性变动频繁，建议每次使用前看官方 Release Notes
+| 计划 | 价格 | 主要内容 |
+|------|------|----------|
+| **Free** | $0/月 | 有限的 Agent / Chat 请求 |
+| **Plus** | $8/月 | 共享 AI 用量池；**仅 Grok 模型** |
+| **Premium**（最热门） | $30/月 | 4× Plus 用量；Grok 最新模型；Cloud agents；第三方模型按 API 价另计 |
+| **Super** | $100/月 | 15× Plus 用量；高峰期优先 |
+| **Ultra** | $200/月 | 50× Plus 用量；最早获得新模型/产品 |
+| **Teams** | $30+/人/月 | 团队管理、用量分析、隐私设置、SSO |
+| **Enterprise** | 定制 | 更细的权限、审计、网络与 MCP 管控 |
+
+> 价格不含税；第三方模型单独计费。来源：[cursor.com/pricing](https://cursor.com/pricing)（2026-11 核对），**以官网为准**。
+>
+> ⚠️ 2026 年价格档位相比 2025 年的 Pro $20 / Business $40 已经重构，旧文章里的价格不要直接引用。
 
 ---
 
-## 定价
+## JetBrains 支持（2026）
 
-| 计划 | 价格 | 内容 |
-|------|------|------|
-| Free | 免费 | 有限 Claude 使用次数 |
-| Pro | $20/月 | 无限制，含最新主流模型（以官方订阅页为准） |
-| Business | $40/月/人 | 团队管理，数据隐私，可关闭数据收集 |
+- 2026-03-04 起，Cursor 通过 **ACP（Agent Client Protocol）** 进入 IntelliJ IDEA、PyCharm、WebStorm 等 JetBrains IDE。
+- 安装方式：在 JetBrains 的 ACP Registry 里安装 Cursor ACP，用 Cursor 账号登录。
+- 能力：Chat、代码解释、Agent 任务；付费计划用户免费使用。
+- 注意：**不是完整 Cursor 客户端**，Tab 补全等 IDE 原生能力仍以 JetBrains 自己的 AI 功能为准。
 
-> 💡 团队购买 Business 计划可以关闭"改善产品"数据收集。
+来源：[Cursor 官方博客](https://cursor.com/blog/jetbrains-acp)，2026-03-04。
 
 ---
 
@@ -167,14 +240,14 @@ You are an expert in Python FastAPI.
 ```
 1. 代码报错 → 复制错误信息
 2. Cmd+L → 粘贴错误 → "这是什么错误，怎么修复？"
-3. 直接让 Cursor 修改代码
+3. 让 Agent 修改并跑测试验证
 ```
 
 ### 场景二：快速生成 API
 ```
 1. 描述需求："用 FastAPI 写一个用户注册接口，
    包含邮箱密码验证，密码 bcrypt 加密"
-2. Cursor 生成完整代码
+2. Agent 生成代码并运行测试
 3. 用 Cmd+K 调整细节
 ```
 
@@ -182,8 +255,31 @@ You are an expert in Python FastAPI.
 ```
 1. Clone 一个新项目
 2. Chat → "@src/ 介绍一下这个项目的架构"
-3. "@src/main.py 这里的中间件是干什么的？"
+3. 需要跨仓库时，在 Agents Window 里开多仓库会话
 ```
+
+### 场景四：本地写一半，交给云端继续
+```
+1. 本地 Agents Window 里启动任务
+2. 点击 "move to cloud"，关掉电脑
+3. 回来在侧边栏看云端 Agent 的 diff / 截图并验收
+```
+
+---
+
+## 历史沿革
+
+- **2026-11**：价格档位为 Free / Plus $8 / Premium $30 / Super $100 / Ultra $200；Teams $30+/人；Grok 4.7 为默认模型家族之一。
+- **2026-10-20**：Cursor Agent SDK 正式可用（Agent as code、evals、部署）。
+- **2026-09-21**：Grok 4.7 发布（与 SpaceXAI 联合训练，256k / 500k 上下文）。
+- **2026-06-16**：SpaceX 宣布以 $60B 收购 Anysphere（Cursor 母公司），预计 Q3 完成；Cursor 年化 B2B 收入约 $2.6B（媒体报道）。
+- **2026-04-02**：**Cursor 3** 发布，以 Agent 为中心的新界面、多仓库、并行 Agent、本地⇄云端交接。
+- **2026-03-19**：Composer 2 发布（Cursor 自有前沿编码模型）。
+- **2026-03-04**：Cursor 通过 ACP 支持 JetBrains IDE。
+- **2026-02-24**：Cursor Agent 可控制自己的电脑（computer use）。
+- **2025**：Cursor 2 / Composer 工作流，Agent 成为核心交互；Pro $20、Business $40。
+- **2024**：Composer 与多文件 Agent 起步，Cursor 从「VS Code 分支」变成独立品类。
+- **2023**：Cursor 发布，早期以 Tab 补全和 Chat 为主。
 
 ---
 
